@@ -1,0 +1,194 @@
+{
+  "resume": "rahul.docx",
+  "hands_on": [
+    {
+      "skill_id": "python",
+      "name": "Python",
+      "category": "Language",
+      "evidence": [
+        {
+          "quote": "- Built payment reconciliation APIs in Python and FastAPI serving 200 requests per second",
+          "block_id": 11,
+          "source": "code",
+          "section": "experience",
+          "entry": 1,
+          "dates": {
+            "start": "2021-01",
+            "end": "present"
+          }
+        }
+      ],
+      "sources": [
+        "code"
+      ],
+      "also_in_theory": false
+    },
+    {
+      "skill_id": "fastapi",
+      "name": "FastAPI",
+      "category": "Framework",
+      "evidence": [
+        {
+          "quote": "- Built payment reconciliation APIs in Python and FastAPI serving 200 requests per second",
+          "block_id": 11,
+          "source": "code",
+          "section": "experience",
+          "entry": 1,
+          "dates": {
+            "start": "2021-01",
+            "end": "present"
+          }
+        },
+        {
+          "quote": "- Implemented a FastAPI service that matches invoices against bank statements using fuzzy matching",
+          "block_id": 17,
+          "source": "code",
+          "section": "projects",
+          "entry": 0,
+          "dates": null
+        }
+      ],
+      "sources": [
+        "code"
+      ],
+      "also_in_theory": false
+    },
+    {
+      "skill_id": "postgresql",
+      "name": "PostgreSQL",
+      "category": "Tool",
+      "evidence": [
+        {
+          "quote": "- Tuned slow PostgreSQL queries using EXPLAIN ANALYZE and added composite indexes, cutting report time from 40 seconds to 6 seconds",
+          "block_id": 12,
+          "source": "code",
+          "section": "experience",
+          "entry": 1,
+          "dates": {
+            "start": "2021-01",
+            "end": "present"
+          }
+        },
+        {
+          "quote": "- Designed a PostgreSQL schema for invoices and ledger entries with partitioning by month",
+          "block_id": 16,
+          "source": "code",
+          "section": "projects",
+          "entry": 0,
+          "dates": null
+        }
+      ],
+      "sources": [
+        "code"
+      ],
+      "also_in_theory": false
+    },
+    {
+      "skill_id": "github_actions",
+      "name": "GitHub Actions",
+      "category": "Tool",
+      "evidence": [
+        {
+          "quote": "- Wrote CI pipelines in GitHub Actions and deployed services to virtual machines",
+          "block_id": 13,
+          "source": "code",
+          "section": "experience",
+          "entry": 1,
+          "dates": {
+            "start": "2021-01",
+            "end": "present"
+          }
+        }
+      ],
+      "sources": [
+        "code"
+      ],
+      "also_in_theory": false
+    },
+    {
+      "skill_id": "flask",
+      "name": "Flask",
+      "category": "Framework",
+      "evidence": [
+        {
+          "quote": "- Built a Flask app with Redis caching for page fragments",
+          "block_id": 19,
+          "source": "code",
+          "section": "projects",
+          "entry": 0,
+          "dates": null
+        }
+      ],
+      "sources": [
+        "code"
+      ],
+      "also_in_theory": false
+    },
+    {
+      "skill_id": "redis",
+      "name": "Redis",
+      "category": "Tool",
+      "evidence": [
+        {
+          "quote": "- Built a Flask app with Redis caching for page fragments",
+          "block_id": 19,
+          "source": "code",
+          "section": "projects",
+          "entry": 0,
+          "dates": null
+        }
+      ],
+      "sources": [
+        "code"
+      ],
+      "also_in_theory": false
+    }
+  ],
+  "theoretical": [
+    {
+      "skill_id": "docker",
+      "name": "Docker",
+      "category": "Tool",
+      "evidence": [
+        {
+          "quote": "Tools: Docker, Git, Redis",
+          "block_id": 8,
+          "source": "code",
+          "section": "skills",
+          "entry": 0,
+          "dates": null
+        }
+      ],
+      "sources": [
+        "code"
+      ],
+      "also_in_theory": false
+    }
+  ],
+  "unmapped": [],
+  "review_candidates": [
+    {
+      "token": "EXPLAIN",
+      "block_id": 12,
+      "column": "hands_on",
+      "quote": "- Tuned slow PostgreSQL queries using EXPLAIN ANALYZE and added composite indexes, cutting report time from 40 seconds to 6 seconds"
+    },
+    {
+      "token": "ANALYZE",
+      "block_id": 12,
+      "column": "hands_on",
+      "quote": "- Tuned slow PostgreSQL queries using EXPLAIN ANALYZE and added composite indexes, cutting report time from 40 seconds to 6 seconds"
+    }
+  ],
+  "rejected_llm_items": [],
+  "code_added": [],
+  "stats": {
+    "llm_used": false,
+    "units": 3,
+    "llm_items": 0,
+    "llm_rejected": 0,
+    "code_added": 0,
+    "code_found_also_by_llm": null,
+    "note": "Phase 2 output for sample_resume.txt (code only, no LLM); the Docker entry was added by hand so the sample also has a listed-only skill"
+  }
+}

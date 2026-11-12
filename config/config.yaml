@@ -1,0 +1,235 @@
+# ONE config file for the whole project. Edit numbers here, not in code.
+# Sections:  phase1 (JD)  |  phase2 (resumes)  |  scoring (Phase 2.5 + HR marks)  |  phase3a (interview questions)  |  phase3b (interview evaluation)
+# API keys are NEVER stored here: only the NAME of the .env variable is.
+#   GROQ_API_KEY    -> Phase 1 + Phase 2   (first Groq account)
+#   GROQ_API_KEY_2  -> Phase 3A + Phase 3B (second Groq account)
+# config/skills_taxonomy.yaml is data (the skill list), not settings, so it stays a separate file.
+
+# ============================================================================ Phase 1: job description
+phase1:
+  # Change settings here, not in code.
+  screening:
+    questions_count: 5            # 4-5 questions (spec)
+
+  llm:
+    provider: groq
+    base_url: https://api.groq.com/openai/v1
+    api_key_env: GROQ_API_KEY     # name of the variable inside .env
+    model: openai/gpt-oss-120b
+    temperature: 0
+    reasoning_effort: low         # low = faster/cheaper. Leave empty if provider has no such option
+    max_output_tokens: 4000
+    max_retries: 1                # re-ask once if the JSON/schema is wrong
+
+  normalise:
+    fuzzy_enabled: true
+    fuzzy_cutoff: 0.90            # strict on purpose (Java must never become JavaScript)
+    fuzzy_min_length: 7
+
+  paths:
+    taxonomy: config/skills_taxonomy.yaml
+    unmapped_queue: output/unmapped_queue.json
+    results_dir: output/results
+
+# ============================================================================ Phase 2: resume standardiser + keywords
+phase2:
+  # All tunable numbers live here. Change them, re-run, compare pass rates.
+  intake:
+    max_file_mb: 10
+    min_chars_per_page: 40        # below this average, a PDF is treated as scanned/image-only
+    min_docx_chars: 30
+
+  extract:
+    line_merge_gap_ratio: 0.25    # max gap between lines (x font size) to merge into one paragraph
+    full_line_ratio: 0.70         # previous line must be this wide (vs widest line in its column) to continue
+    hidden_font_size_max: 3.0     # text smaller than this (pt) is flagged as hidden
+
+  reading_order:
+    column_gap_ratio: 0.12        # min gap between column x-starts, as share of page width
+    min_column_width_ratio: 0.22  # each column must be at least this wide
+    min_blocks_per_column: 3
+
+  label:
+    heading_fuzzy_threshold: 88
+    max_heading_words: 5
+    min_confidence: 0.5           # blocks below this go to human review
+    heading_style_exclusive_ratio: 0.5
+
+  review:
+    max_other_ratio: 0.40         # share of characters labelled "other" before review
+    max_low_conf_ratio: 0.15
+
+  headings:
+    summary: [summary, professional summary, profile, professional profile, objective, career objective, about me, about, career summary, executive summary]
+    experience: [experience, work experience, professional experience, employment, employment history, work history, career history, relevant experience, internships, internship experience]
+    education: [education, academics, academic background, educational qualifications, education and training, qualifications, academic qualifications]
+    skills: [skills, technical skills, key skills, core skills, core competencies, skills and tools, tools and technologies, technologies, technical expertise, areas of expertise]
+    projects: [projects, personal projects, academic projects, key projects, selected projects]
+    certifications: [certifications, certificates, courses, licenses and certifications, training and certifications, certifications and achievements, achievements and certifications, certifications and awards]
+    achievements: [achievements, awards, honors, awards and achievements, accomplishments, publications]
+    languages: [languages, language skills]
+    interests: [interests, hobbies, hobbies and interests, extracurricular activities]
+    references: [references]
+    contact: [contact, contact details, contact information, personal details, personal information]
+
+  skills_vocab: [python, java, javascript, typescript, sql, mysql, postgresql, mongodb, redis, c, c++, c#, go, golang, rust, php, ruby, kotlin, swift, scala, r, matlab, html, css, react, reactjs, angular, vue, nodejs, node.js, express, django, flask, fastapi, spring, spring boot, dotnet, .net, docker, kubernetes, aws, azure, gcp, terraform, ansible, jenkins, git, github, gitlab, linux, bash, ci/cd, rest, graphql, kafka, rabbitmq, spark, hadoop, airflow, pandas, numpy, scikit-learn, tensorflow, pytorch, nlp, tableau, power bi, excel, jira, agile, scrum, figma, selenium, junit, pytest, oracle, sap, salesforce, communication, leadership, teamwork, problem solving]
+
+  education_words: [b.tech, btech, b.e, b.sc, bsc, m.tech, mtech, m.sc, msc, mba, bca, mca, ph.d, phd, bachelor, bachelors, master, masters, university, college, institute, school, cgpa, gpa, hsc, ssc, diploma, degree]
+  cert_words: [certified, certification, certificate, coursera, udemy, nptel, edx, pmp, aws certified, azure certified]
+
+  ocr:
+    enabled: true                 # PDFs with no text layer are read by OCR and always sent to human review
+    language: eng
+    dpi: 300
+    min_line_conf: 65             # lines below this mean confidence get flagged
+    gap_ratio: 0.6                # OCR line boxes are tight, so the paragraph-gap rule is looser
+    tesseract_cmd: ""             # leave empty to auto-find; Windows example: C:\Program Files\Tesseract-OCR\tesseract.exe
+    fixes:                        # known OCR misreads; only these are ever auto-corrected, and every one is flagged
+      - {pattern: '(?<=Open)Al(?![A-Za-z])', replace: 'AI'}
+      - {pattern: '(?<=Gen)Al(?![A-Za-z])', replace: 'AI'}
+      - {pattern: '(?<![A-Za-z])Al(?=\s*/\s*ML)', replace: 'AI'}
+      - {pattern: '(?<=[Gg]enerative )Al(?![A-Za-z])', replace: 'AI'}
+      - {pattern: '(?<=[Aa]pplied )Al(?![A-Za-z])', replace: 'AI'}
+      - {pattern: '(?<![A-Za-z])Al(?= (?:Interview|Training|Engineer|Intern|Assistant|Model|Agent)\b)', replace: 'AI'}
+      - {pattern: '\bAPls\b', replace: 'APIs'}
+      - {pattern: '\bGrog\b(?=\s*,\s*Gemini)', replace: 'Groq'}
+
+  privacy:
+    show_name: true               # false = replace the candidate name with [NAME]
+    mask_domains: [linkedin.com, facebook.com, instagram.com, twitter.com, x.com, wa.me, t.me]
+    profile_hosts: [github.com, gitlab.com, bitbucket.org, behance.net, medium.com, kaggle.com]   # profile page = masked, repo/notebook/article = shown
+
+  keywords:
+    taxonomy_path: config/skills_taxonomy.yaml
+    hands_on_sections: [experience, projects]
+    skip_sections: [contact, languages, interests, references]
+    evidence_per_skill: 3
+    review_cap: 40
+    # text that marks something as "being learned": it goes to the theoretical column even inside a project
+    learning_cues: [currently learning, currently exploring, currently studying, in progress, pursuing, familiar with,
+                    basic knowledge, basic understanding, exposure to, beginner, planning to, curriculum, coursework, self-learning]
+    # plain-English words that are also skill names: only matched in a skill list or beside a word like "language"
+    ambiguous_words: [go, rust, ruby, swift, dart, julia, apex, less, remix, express, chef, puppet, bamboo, consul, kong,
+                      packer, unity, unreal, sketch, framer, prophet, ray, chroma, requests, poetry, expo, eclipse, mocha,
+                      jest, looker, sentry, shiny, locust, prettier, babel, yarn, windows, slack, notion, waterfall, ownership,
+                      net, next, node, rest, cloud, shell, spring, spark, solid, three, vault, monday, nexus, oracle, premiere,
+                      proactive, rails, maya, loki, glue, hive, flux, dash, lightning, lambda, lora, kali, bedrock, aurora,
+                      athena, cognito, spanner, torch, triton, presto, coaching, mentoring, firewall, claude, gemini, llama]
+    review_stoplist: [pdf, b.tech, m.tech, b.e, b.sc, m.sc, mca, bca, mba, bba, bsc, msc, btech, mtech, cgpa, gpa, hsc, ssc, phd, email, phone, url, name, pincode,
+                      and, the, for, with, from, using, built, jan, feb, mar, apr, jun, jul, aug, sep, sept, oct, nov, dec]
+
+
+
+  llm:
+    enabled: true
+    provider: groq
+    model: openai/gpt-oss-120b    # example, neeche note dekho
+    max_tokens: 4000
+    cache_dir: .cache/llm
+
+# ============================================================================ Phase 2.5: scoring + HR screening marks
+scoring:
+  # Phase 2.5 scoring. Change numbers here, not in code.
+  #   score = 100 * sum(weight * credit) / sum(weights)       (weights come from the JD only)
+  weights:
+    must_have: 3
+    nice_to_have: 1
+  credits:                      # a skill found in both columns gets the HIGHEST credit, never the sum
+    hands_on: 1.0
+    theoretical: 0.4
+  hr_screening:                 # HR marks each screening answer per candidate (kept apart from the resume score)
+    Met: 1.0
+    Partly met: 0.5
+    Not met: 0.0
+
+# ============================================================================ Phase 3A: interview questions
+phase3a:
+  # All tunables for Phase 3A (interview questions). Edit here, no code change needed.
+  # Phase 3A is separate from the HR screening questions of Phase 1 (config/settings.yaml -> screening):
+  #   HR screening   = same generic questions for EVERY candidate, marked Met / Partly met / Not met by HR.
+  #   Interview (3A) = written PER CANDIDATE from their own resume evidence; difficulty follows their experience.
+
+  llm:
+    provider: groq
+    model: openai/gpt-oss-120b
+    base_url: https://api.groq.com/openai/v1
+    api_key_env: GROQ_API_KEY_2     # second Groq account: Phase 3 only (Phase 1 + 2 use GROQ_API_KEY)
+    temperature: 0.2
+    reasoning_effort: low           # low | medium | high  (higher = slower, more tokens)
+    max_output_tokens: 10000        # one call per section (max ~5 questions). Raise if you see 'output was cut off'
+    max_schema_retries: 2           # re-ask when the model returns invalid JSON
+
+  workflow:
+    engine: maf                 # maf | plain  (plain = same steps, no MAF; used by tests/offline demo)
+    max_regeneration_rounds: 2  # only failed slots are regenerated
+    max_parallel_candidates: 1  # candidates processed at the same time. Raise only if your Groq limits allow it
+
+  input:
+    min_chars_jd: 50
+    min_chars_resume: 80
+    max_chars_jd: 20000         # longer input is rejected, never silently cut
+    max_chars_resume: 30000
+    max_skills: null            # null = no limit (every JD skill is used). Set a number to cap it.
+    mask_pii: true              # emails + phone numbers masked before text goes to the LLM
+
+  # Level = years on THAT skill. If the resume gives no years for the skill, the candidate's
+  # overall experience is used. If neither is known -> "unknown" -> medium.
+  experience_levels:
+    mid_from_years: 1.0             # below this = fresher
+    senior_from_years: 3.0          # this or more = experienced -> hard questions
+
+  # The interview paper has 4 sections:
+  #   basic          (extra_sections.basic)          very basic questions (e.g. set vs tuple) on skills the resume shows; always easy
+  #   resume_based   (questions.total)               built from the candidate's resume evidence (old 3A behaviour)
+  #   scenario_case  (extra_sections.scenario_case)  situational / case questions, hard to think of from the resume alone
+  #   coding         (extra_sections.coding)         easy coding questions that include a small code snippet; always easy
+  # basic uses the resume's skills (falls back to JD skills if the resume shows none); scenario_case and coding use JD skills.
+  # No project text is sent to the model for these three sections. Every question has just: question + answer keywords.
+  questions:
+    total: 5                    # RESUME-BASED questions only
+    extra_sections:             # 0 switches a section off
+      basic: 5
+      scenario_case: 5
+      coding: 5
+    mix:                        # mix of the resume-based questions; must sum to 1.0
+      technical: 0.5
+      scenario: 0.3
+      behavioural: 0.2
+    max_per_skill: 2
+    gap_questions: must_have_only   # must_have_only | all | none
+
+  # bucket x experience level -> difficulty
+  # (listed_only stays medium: skill is claimed but not proven in any project)
+  difficulty_matrix:
+    project_hands_on:
+      fresher: medium
+      mid: medium
+      senior: hard
+      unknown: medium
+    listed_only:
+      fresher: medium
+      mid: medium
+      senior: medium
+      unknown: medium
+    gap:
+      fresher: easy
+      mid: easy
+      senior: easy
+      unknown: easy
+
+  storage:
+    output_dir: output/scaffolds
+
+  review:
+    disclaimer: "AI-generated, needs human review"
+
+# ============================================================================ Phase 3B: interview evaluation (transcript -> ratings -> recommendation)
+phase3b:
+  base_url: https://api.groq.com/openai/v1
+  api_key_env: GROQ_API_KEY_2     # second Groq account (same key as Phase 3A)
+  model: openai/gpt-oss-120b      # env GROQ_MODEL overrides this
+  temperature: 0.2
+  reasoning_effort: low
+  max_output_tokens: 8000
+  max_tries: 4
+  timeout_seconds: 120

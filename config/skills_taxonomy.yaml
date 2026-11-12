@@ -1,0 +1,955 @@
+# ONE taxonomy for ALL roles. One skill per line. Format:
+#   id: {name: Display name, category: Language|Framework|Tool|Domain, aliases: [other spellings]}
+#
+# What belongs here: a NAMED, standard skill (a language, framework, library, tool, platform,
+# protocol, standard, or a well-known discipline such as "Machine Learning").
+# What does NOT belong: vague phrases like "AI/ML models", "cloud technologies", "databases",
+# "frontend skills", "good coding practices". Those stay Unmapped on purpose.
+#
+# Name and id are matched automatically. List only extra spellings in aliases.
+# Spaces, dots, dashes, "/" and "_" are ignored when matching, so "React.js", "react js" and
+# "React-JS" all match the alias "reactjs".
+# Do not use commas inside a name or alias. Avoid very short aliases that are also normal words.
+
+# ======================= Programming languages =======================
+python: {name: Python, category: Language, aliases: [python3, python 3, py]}
+java: {name: Java, category: Language, aliases: [core java, java 8, java 11, java 17, java se]}
+javascript: {name: JavaScript, category: Language, aliases: [js, es6, ecmascript, java script, vanilla js, vanilla javascript]}
+typescript: {name: TypeScript, category: Language, aliases: [ts]}
+csharp: {name: C#, category: Language, aliases: [c sharp, csharp]}
+cpp: {name: C++, category: Language, aliases: [cpp, c plus plus]}
+c: {name: C, category: Language, aliases: [c language, c programming]}
+golang: {name: Go, category: Language, aliases: [golang, go lang]}
+rust: {name: Rust, category: Language, aliases: [rust lang]}
+php: {name: PHP, category: Language, aliases: []}
+ruby: {name: Ruby, category: Language, aliases: []}
+kotlin: {name: Kotlin, category: Language, aliases: []}
+swift: {name: Swift, category: Language, aliases: []}
+objective_c: {name: Objective-C, category: Language, aliases: [objective c, objc]}
+scala: {name: Scala, category: Language, aliases: []}
+dart: {name: Dart, category: Language, aliases: []}
+r: {name: R, category: Language, aliases: [r language, r programming]}
+matlab: {name: MATLAB, category: Language, aliases: []}
+julia: {name: Julia, category: Language, aliases: [julia lang]}
+perl: {name: Perl, category: Language, aliases: []}
+lua: {name: Lua, category: Language, aliases: []}
+haskell: {name: Haskell, category: Language, aliases: []}
+elixir: {name: Elixir, category: Language, aliases: []}
+erlang: {name: Erlang, category: Language, aliases: []}
+clojure: {name: Clojure, category: Language, aliases: []}
+groovy: {name: Groovy, category: Language, aliases: []}
+fsharp: {name: F#, category: Language, aliases: [f sharp, fsharp]}
+vba: {name: VBA, category: Language, aliases: [excel vba, visual basic for applications]}
+cobol: {name: COBOL, category: Language, aliases: []}
+fortran: {name: Fortran, category: Language, aliases: []}
+assembly: {name: Assembly, category: Language, aliases: [assembly language, asm]}
+solidity: {name: Solidity, category: Language, aliases: []}
+verilog: {name: Verilog, category: Language, aliases: [systemverilog]}
+vhdl: {name: VHDL, category: Language, aliases: []}
+sas: {name: SAS, category: Language, aliases: [sas programming]}
+apex: {name: Apex, category: Language, aliases: [salesforce apex]}
+abap: {name: ABAP, category: Language, aliases: [sap abap]}
+sql: {name: SQL, category: Language, aliases: [structured query language, sql queries]}
+plsql: {name: PL/SQL, category: Language, aliases: [pl sql, oracle pl/sql]}
+tsql: {name: T-SQL, category: Language, aliases: [t sql, transact-sql, transact sql]}
+graphql: {name: GraphQL, category: Language, aliases: [graph ql]}
+bash: {name: Bash, category: Language, aliases: [shell, shell scripting, shell script, bash scripting]}
+powershell: {name: PowerShell, category: Language, aliases: []}
+html: {name: HTML, category: Language, aliases: [html5]}
+css: {name: CSS, category: Language, aliases: [css3]}
+sass: {name: Sass, category: Language, aliases: [scss]}
+less: {name: Less, category: Language, aliases: [less css]}
+xml: {name: XML, category: Language, aliases: []}
+
+# ======================= Frontend frameworks and libraries =======================
+react: {name: React, category: Framework, aliases: [reactjs, react.js, react js, react 18, react 17]}
+nextjs: {name: Next.js, category: Framework, aliases: [next, next.js, next js]}
+gatsby: {name: Gatsby, category: Framework, aliases: [gatsbyjs]}
+angular: {name: Angular, category: Framework, aliases: [angular 2+, angular2]}
+angularjs: {name: AngularJS, category: Framework, aliases: [angular js, angular 1]}
+vuejs: {name: Vue.js, category: Framework, aliases: [vue, vue.js, vue js, vue 3]}
+nuxtjs: {name: Nuxt.js, category: Framework, aliases: [nuxt, nuxt js]}
+svelte: {name: Svelte, category: Framework, aliases: [sveltekit]}
+astro: {name: Astro, category: Framework, aliases: [astro build]}
+remix: {name: Remix, category: Framework, aliases: [remix run]}
+redux: {name: Redux, category: Framework, aliases: [redux toolkit]}
+mobx: {name: MobX, category: Framework, aliases: []}
+zustand: {name: Zustand, category: Framework, aliases: []}
+react_query: {name: TanStack Query, category: Framework, aliases: [react query, tanstack query]}
+rxjs: {name: RxJS, category: Framework, aliases: [rx js]}
+jquery: {name: jQuery, category: Framework, aliases: []}
+tailwindcss: {name: Tailwind CSS, category: Framework, aliases: [tailwind]}
+bootstrap: {name: Bootstrap, category: Framework, aliases: []}
+materialui: {name: Material UI, category: Framework, aliases: [mui, material-ui]}
+chakra_ui: {name: Chakra UI, category: Framework, aliases: [chakra]}
+ant_design: {name: Ant Design, category: Framework, aliases: [antd]}
+styled_components: {name: styled-components, category: Framework, aliases: [styled components]}
+threejs: {name: Three.js, category: Framework, aliases: [three, three js]}
+d3js: {name: D3.js, category: Framework, aliases: [d3, d3 js]}
+chartjs: {name: Chart.js, category: Framework, aliases: [chart js]}
+electron: {name: Electron, category: Framework, aliases: [electronjs, electron js]}
+
+# ======================= Frontend build and quality tools =======================
+webpack: {name: Webpack, category: Tool, aliases: []}
+vite: {name: Vite, category: Tool, aliases: [vitejs]}
+babel: {name: Babel, category: Tool, aliases: [babeljs]}
+eslint: {name: ESLint, category: Tool, aliases: []}
+prettier: {name: Prettier, category: Tool, aliases: []}
+npm: {name: npm, category: Tool, aliases: []}
+yarn: {name: Yarn, category: Tool, aliases: []}
+pnpm: {name: pnpm, category: Tool, aliases: []}
+storybook: {name: Storybook, category: Tool, aliases: []}
+
+# ======================= Backend frameworks =======================
+nodejs: {name: Node.js, category: Framework, aliases: [node, node.js, node js]}
+express: {name: Express, category: Framework, aliases: [expressjs, express.js, express js]}
+nestjs: {name: NestJS, category: Framework, aliases: [nest.js, nest js]}
+fastify: {name: Fastify, category: Framework, aliases: []}
+deno: {name: Deno, category: Framework, aliases: []}
+django: {name: Django, category: Framework, aliases: [django rest framework, drf]}
+flask: {name: Flask, category: Framework, aliases: []}
+fastapi: {name: FastAPI, category: Framework, aliases: [fast api]}
+celery: {name: Celery, category: Framework, aliases: []}
+sqlalchemy: {name: SQLAlchemy, category: Framework, aliases: [sql alchemy]}
+springboot: {name: Spring Boot, category: Framework, aliases: [spring-boot]}
+spring_framework: {name: Spring Framework, category: Framework, aliases: [spring, spring mvc]}
+hibernate: {name: Hibernate, category: Framework, aliases: []}
+dotnet: {name: .NET, category: Framework, aliases: [dotnet, dot net, .net core, dotnet core]}
+aspnet: {name: ASP.NET, category: Framework, aliases: [asp.net, asp.net core, asp net]}
+entity_framework: {name: Entity Framework, category: Framework, aliases: [ef core, entity framework core]}
+laravel: {name: Laravel, category: Framework, aliases: []}
+symfony: {name: Symfony, category: Framework, aliases: []}
+rails: {name: Ruby on Rails, category: Framework, aliases: [rails, ror]}
+grpc: {name: gRPC, category: Framework, aliases: [g rpc]}
+maven: {name: Maven, category: Tool, aliases: [apache maven]}
+gradle: {name: Gradle, category: Tool, aliases: []}
+tomcat: {name: Apache Tomcat, category: Tool, aliases: [tomcat]}
+
+# ======================= Mobile and desktop =======================
+react_native: {name: React Native, category: Framework, aliases: [react-native, reactnative]}
+flutter: {name: Flutter, category: Framework, aliases: []}
+android: {name: Android, category: Framework, aliases: [android sdk, android development]}
+ios: {name: iOS, category: Framework, aliases: [ios development, ios sdk]}
+swiftui: {name: SwiftUI, category: Framework, aliases: [swift ui]}
+jetpack_compose: {name: Jetpack Compose, category: Framework, aliases: []}
+xamarin: {name: Xamarin, category: Framework, aliases: [net maui, maui]}
+ionic: {name: Ionic, category: Framework, aliases: []}
+firebase: {name: Firebase, category: Tool, aliases: []}
+xcode: {name: Xcode, category: Tool, aliases: []}
+android_studio: {name: Android Studio, category: Tool, aliases: []}
+
+# ======================= Databases and data stores =======================
+postgresql: {name: PostgreSQL, category: Tool, aliases: [postgres, postgre sql, postgres sql, psql]}
+mysql: {name: MySQL, category: Tool, aliases: [my sql]}
+mariadb: {name: MariaDB, category: Tool, aliases: []}
+sqlserver: {name: SQL Server, category: Tool, aliases: [ms sql server, microsoft sql server, mssql]}
+oracle_database: {name: Oracle Database, category: Tool, aliases: [oracle db, oracle]}
+sqlite: {name: SQLite, category: Tool, aliases: []}
+mongodb: {name: MongoDB, category: Tool, aliases: [mongo, mongo db]}
+cassandra: {name: Apache Cassandra, category: Tool, aliases: [cassandra]}
+redis: {name: Redis, category: Tool, aliases: []}
+memcached: {name: Memcached, category: Tool, aliases: []}
+elasticsearch: {name: Elasticsearch, category: Tool, aliases: [elastic search]}
+opensearch: {name: OpenSearch, category: Tool, aliases: [open search]}
+dynamodb: {name: DynamoDB, category: Tool, aliases: [dynamo db, amazon dynamodb]}
+cosmosdb: {name: Cosmos DB, category: Tool, aliases: [azure cosmos db, cosmosdb]}
+firestore: {name: Firestore, category: Tool, aliases: [cloud firestore]}
+neo4j: {name: Neo4j, category: Tool, aliases: []}
+influxdb: {name: InfluxDB, category: Tool, aliases: []}
+clickhouse: {name: ClickHouse, category: Tool, aliases: []}
+snowflake: {name: Snowflake, category: Tool, aliases: []}
+bigquery: {name: BigQuery, category: Tool, aliases: [big query, google bigquery]}
+redshift: {name: Amazon Redshift, category: Tool, aliases: [redshift, aws redshift]}
+pinecone: {name: Pinecone, category: Tool, aliases: []}
+weaviate: {name: Weaviate, category: Tool, aliases: []}
+chromadb: {name: Chroma, category: Tool, aliases: [chroma, chroma db]}
+milvus: {name: Milvus, category: Tool, aliases: []}
+faiss: {name: FAISS, category: Tool, aliases: []}
+pgvector: {name: pgvector, category: Tool, aliases: [pg vector]}
+database_design: {name: Database Design, category: Domain, aliases: [database schema design, schema design]}
+data_modeling: {name: Data Modeling, category: Domain, aliases: [data modelling]}
+
+# ======================= AWS =======================
+aws: {name: AWS, category: Tool, aliases: [amazon web services, aws cloud, amazon aws]}
+ec2: {name: Amazon EC2, category: Tool, aliases: [aws ec2]}
+s3: {name: Amazon S3, category: Tool, aliases: [aws s3]}
+lambda: {name: AWS Lambda, category: Tool, aliases: [lambda]}
+rds: {name: Amazon RDS, category: Tool, aliases: [aws rds]}
+ecs: {name: Amazon ECS, category: Tool, aliases: [aws ecs]}
+eks: {name: Amazon EKS, category: Tool, aliases: [aws eks]}
+cloudfront: {name: Amazon CloudFront, category: Tool, aliases: [aws cloudfront]}
+route53: {name: Amazon Route 53, category: Tool, aliases: [aws route 53]}
+cloudwatch: {name: Amazon CloudWatch, category: Tool, aliases: [aws cloudwatch]}
+cloudformation: {name: CloudFormation, category: Tool, aliases: [aws cloudformation]}
+cdk: {name: AWS CDK, category: Tool, aliases: [aws cdk, cdk]}
+sqs: {name: Amazon SQS, category: Tool, aliases: [aws sqs]}
+sns: {name: Amazon SNS, category: Tool, aliases: [aws sns]}
+kinesis: {name: Amazon Kinesis, category: Tool, aliases: [aws kinesis]}
+glue: {name: AWS Glue, category: Tool, aliases: [glue]}
+athena: {name: Amazon Athena, category: Tool, aliases: [aws athena]}
+emr: {name: Amazon EMR, category: Tool, aliases: [aws emr]}
+sagemaker: {name: SageMaker, category: Tool, aliases: [aws sagemaker, amazon sagemaker]}
+bedrock: {name: Amazon Bedrock, category: Tool, aliases: [aws bedrock]}
+iam: {name: Identity and Access Management, category: Domain, aliases: [iam, aws iam]}
+
+# ======================= Azure =======================
+azure: {name: Azure, category: Tool, aliases: [microsoft azure, azure cloud, ms azure]}
+azure_devops: {name: Azure DevOps, category: Tool, aliases: [vsts, tfs]}
+azure_functions: {name: Azure Functions, category: Tool, aliases: []}
+aks: {name: Azure Kubernetes Service, category: Tool, aliases: [aks]}
+azure_data_factory: {name: Azure Data Factory, category: Tool, aliases: [adf]}
+azure_synapse: {name: Azure Synapse, category: Tool, aliases: [synapse analytics, azure synapse analytics]}
+azure_openai: {name: Azure OpenAI, category: Tool, aliases: [azure openai service]}
+azure_ml: {name: Azure Machine Learning, category: Tool, aliases: [azure ml]}
+entra_id: {name: Microsoft Entra ID, category: Tool, aliases: [azure active directory, azure ad, aad]}
+
+# ======================= Google Cloud =======================
+gcp: {name: GCP, category: Tool, aliases: [google cloud, google cloud platform, gcp cloud, google cloud services]}
+gke: {name: Google Kubernetes Engine, category: Tool, aliases: [gke]}
+pubsub: {name: Pub/Sub, category: Tool, aliases: [google pub/sub, gcp pubsub]}
+dataflow: {name: Dataflow, category: Tool, aliases: [google dataflow, apache beam]}
+vertex_ai: {name: Vertex AI, category: Tool, aliases: [google vertex ai]}
+
+# ======================= Other cloud and hosting platforms =======================
+heroku: {name: Heroku, category: Tool, aliases: []}
+vercel: {name: Vercel, category: Tool, aliases: []}
+netlify: {name: Netlify, category: Tool, aliases: []}
+digitalocean: {name: DigitalOcean, category: Tool, aliases: [digital ocean]}
+cloudflare: {name: Cloudflare, category: Tool, aliases: []}
+openshift: {name: Red Hat OpenShift, category: Tool, aliases: [openshift]}
+vmware: {name: VMware, category: Tool, aliases: [vmware vsphere, vsphere]}
+openstack: {name: OpenStack, category: Tool, aliases: [open stack]}
+cloud_computing: {name: Cloud Computing, category: Domain, aliases: [cloud]}
+
+# ======================= DevOps: source control, containers, IaC, CI/CD =======================
+git: {name: Git, category: Tool, aliases: []}
+github: {name: GitHub, category: Tool, aliases: [git hub]}
+gitlab: {name: GitLab, category: Tool, aliases: [git lab]}
+bitbucket: {name: Bitbucket, category: Tool, aliases: []}
+docker: {name: Docker, category: Tool, aliases: [dockerfile, docker compose, docker containers]}
+podman: {name: Podman, category: Tool, aliases: []}
+kubernetes: {name: Kubernetes, category: Tool, aliases: [k8s]}
+helm: {name: Helm, category: Tool, aliases: [helm charts]}
+kustomize: {name: Kustomize, category: Tool, aliases: []}
+istio: {name: Istio, category: Tool, aliases: []}
+terraform: {name: Terraform, category: Tool, aliases: []}
+ansible: {name: Ansible, category: Tool, aliases: []}
+puppet: {name: Puppet, category: Tool, aliases: []}
+chef: {name: Chef, category: Tool, aliases: []}
+pulumi: {name: Pulumi, category: Tool, aliases: []}
+packer: {name: Packer, category: Tool, aliases: [hashicorp packer]}
+vagrant: {name: Vagrant, category: Tool, aliases: []}
+jenkins: {name: Jenkins, category: Tool, aliases: []}
+github_actions: {name: GitHub Actions, category: Tool, aliases: [github action, gh actions]}
+gitlab_ci: {name: GitLab CI, category: Tool, aliases: [gitlab ci/cd, gitlab pipelines]}
+circleci: {name: CircleCI, category: Tool, aliases: [circle ci]}
+teamcity: {name: TeamCity, category: Tool, aliases: [team city]}
+bamboo: {name: Bamboo, category: Tool, aliases: [atlassian bamboo]}
+argocd: {name: Argo CD, category: Tool, aliases: [argo cd]}
+fluxcd: {name: Flux CD, category: Tool, aliases: [flux, fluxcd]}
+consul: {name: Consul, category: Tool, aliases: [hashicorp consul]}
+vault: {name: HashiCorp Vault, category: Tool, aliases: [vault]}
+nexus: {name: Sonatype Nexus, category: Tool, aliases: [nexus, nexus repository]}
+artifactory: {name: JFrog Artifactory, category: Tool, aliases: [artifactory, jfrog]}
+sonarqube: {name: SonarQube, category: Tool, aliases: [sonar]}
+
+# ======================= Servers, OS and infrastructure =======================
+linux: {name: Linux, category: Tool, aliases: [unix, linux/unix]}
+windows_server: {name: Windows Server, category: Tool, aliases: []}
+active_directory: {name: Active Directory, category: Tool, aliases: [ms active directory]}
+nginx: {name: Nginx, category: Tool, aliases: []}
+apache_http: {name: Apache HTTP Server, category: Tool, aliases: [apache httpd, httpd, apache server]}
+haproxy: {name: HAProxy, category: Tool, aliases: []}
+iis: {name: IIS, category: Tool, aliases: [internet information services]}
+virtualization: {name: Virtualization, category: Domain, aliases: []}
+networking: {name: Networking, category: Domain, aliases: [computer networking]}
+tcp_ip: {name: TCP/IP, category: Domain, aliases: [tcpip]}
+dns: {name: DNS, category: Domain, aliases: [domain name system]}
+load_balancing: {name: Load Balancing, category: Domain, aliases: [load balancer]}
+
+# ======================= Monitoring and observability =======================
+prometheus: {name: Prometheus, category: Tool, aliases: []}
+grafana: {name: Grafana, category: Tool, aliases: []}
+datadog: {name: Datadog, category: Tool, aliases: []}
+new_relic: {name: New Relic, category: Tool, aliases: [newrelic]}
+splunk: {name: Splunk, category: Tool, aliases: []}
+dynatrace: {name: Dynatrace, category: Tool, aliases: []}
+elk: {name: ELK Stack, category: Tool, aliases: [elastic stack, elk stack]}
+kibana: {name: Kibana, category: Tool, aliases: []}
+jaeger: {name: Jaeger, category: Tool, aliases: []}
+opentelemetry: {name: OpenTelemetry, category: Tool, aliases: [otel, open telemetry]}
+nagios: {name: Nagios, category: Tool, aliases: []}
+zabbix: {name: Zabbix, category: Tool, aliases: []}
+pagerduty: {name: PagerDuty, category: Tool, aliases: [pager duty]}
+observability: {name: Observability, category: Domain, aliases: [monitoring, application monitoring, logging and monitoring]}
+
+# ======================= DevOps and engineering practices =======================
+devops: {name: DevOps, category: Domain, aliases: [dev ops]}
+ci_cd: {name: CI/CD, category: Domain, aliases: [cicd, ci cd, continuous integration, continuous delivery, continuous deployment, ci/cd pipelines, ci/cd pipeline]}
+iac: {name: Infrastructure as Code, category: Domain, aliases: [iac, infra as code]}
+sre: {name: Site Reliability Engineering, category: Domain, aliases: [sre]}
+devsecops: {name: DevSecOps, category: Domain, aliases: [dev sec ops]}
+gitops: {name: GitOps, category: Domain, aliases: [git ops]}
+containerization: {name: Containerization, category: Domain, aliases: [containers]}
+microservices: {name: Microservices, category: Domain, aliases: [microservice, microservices architecture]}
+event_driven_architecture: {name: Event-Driven Architecture, category: Domain, aliases: [event driven architecture]}
+system_design: {name: System Design, category: Domain, aliases: [software architecture, high level design, low level design]}
+design_patterns: {name: Design Patterns, category: Domain, aliases: [gang of four patterns]}
+solid_principles: {name: SOLID Principles, category: Domain, aliases: [solid]}
+domain_driven_design: {name: Domain-Driven Design, category: Domain, aliases: [ddd, domain driven design]}
+oop: {name: Object-Oriented Programming, category: Domain, aliases: [oop, oops, object oriented programming]}
+functional_programming: {name: Functional Programming, category: Domain, aliases: []}
+dsa: {name: Data Structures and Algorithms, category: Domain, aliases: [dsa, data structures]}
+multithreading: {name: Multithreading, category: Domain, aliases: [concurrency, concurrent programming]}
+api_design: {name: API Design, category: Domain, aliases: [rest api design]}
+rest_api: {name: REST API, category: Domain, aliases: [rest, restful, restful api, restful apis, rest apis, rest services, restful services, restful web services, web services, web apis]}
+soap: {name: SOAP, category: Domain, aliases: [soap api, soap web services]}
+openapi: {name: OpenAPI, category: Domain, aliases: [swagger, openapi specification, swagger openapi]}
+websockets: {name: WebSockets, category: Domain, aliases: [websocket, web sockets]}
+agile: {name: Agile, category: Domain, aliases: [agile methodology]}
+scrum: {name: Scrum, category: Domain, aliases: []}
+kanban: {name: Kanban, category: Domain, aliases: []}
+
+# ======================= Messaging and streaming =======================
+kafka: {name: Apache Kafka, category: Tool, aliases: [kafka]}
+rabbitmq: {name: RabbitMQ, category: Tool, aliases: [rabbit mq]}
+activemq: {name: ActiveMQ, category: Tool, aliases: [active mq]}
+mqtt: {name: MQTT, category: Domain, aliases: []}
+
+# ======================= Testing and QA =======================
+selenium: {name: Selenium, category: Tool, aliases: [selenium webdriver]}
+cypress: {name: Cypress, category: Tool, aliases: []}
+playwright: {name: Playwright, category: Tool, aliases: []}
+puppeteer: {name: Puppeteer, category: Tool, aliases: []}
+appium: {name: Appium, category: Tool, aliases: []}
+postman: {name: Postman, category: Tool, aliases: []}
+soapui: {name: SoapUI, category: Tool, aliases: [soap ui]}
+jmeter: {name: JMeter, category: Tool, aliases: [apache jmeter]}
+locust: {name: Locust, category: Tool, aliases: []}
+k6: {name: k6, category: Tool, aliases: [grafana k6]}
+jest: {name: Jest, category: Tool, aliases: []}
+vitest: {name: Vitest, category: Tool, aliases: []}
+mocha: {name: Mocha, category: Tool, aliases: [mochajs]}
+react_testing_library: {name: React Testing Library, category: Tool, aliases: [rtl]}
+junit: {name: JUnit, category: Tool, aliases: []}
+testng: {name: TestNG, category: Tool, aliases: [test ng]}
+pytest: {name: pytest, category: Tool, aliases: [py test]}
+cucumber: {name: Cucumber, category: Tool, aliases: []}
+robot_framework: {name: Robot Framework, category: Tool, aliases: []}
+unit_testing: {name: Unit Testing, category: Domain, aliases: [unit tests]}
+integration_testing: {name: Integration Testing, category: Domain, aliases: []}
+regression_testing: {name: Regression Testing, category: Domain, aliases: []}
+manual_testing: {name: Manual Testing, category: Domain, aliases: []}
+test_automation: {name: Test Automation, category: Domain, aliases: [automation testing, automated testing]}
+api_testing: {name: API Testing, category: Domain, aliases: []}
+performance_testing: {name: Performance Testing, category: Domain, aliases: [load testing]}
+tdd: {name: Test-Driven Development, category: Domain, aliases: [tdd, test driven development]}
+bdd: {name: Behavior-Driven Development, category: Domain, aliases: [bdd, behaviour driven development, behavior driven development]}
+
+# ======================= Project and collaboration tools =======================
+jira: {name: Jira, category: Tool, aliases: []}
+confluence: {name: Confluence, category: Tool, aliases: []}
+trello: {name: Trello, category: Tool, aliases: []}
+
+# ======================= Security =======================
+owasp: {name: OWASP Top 10, category: Domain, aliases: [owasp]}
+penetration_testing: {name: Penetration Testing, category: Domain, aliases: [pentesting, pen testing, ethical hacking, vapt]}
+vulnerability_assessment: {name: Vulnerability Assessment, category: Domain, aliases: [vulnerability scanning]}
+cryptography: {name: Cryptography, category: Domain, aliases: [encryption]}
+siem: {name: SIEM, category: Domain, aliases: [security information and event management]}
+oauth: {name: OAuth, category: Domain, aliases: [oauth2, oauth 2.0, oauth 2]}
+jwt: {name: JWT, category: Domain, aliases: [json web token, json web tokens]}
+saml: {name: SAML, category: Domain, aliases: []}
+openid_connect: {name: OpenID Connect, category: Domain, aliases: [oidc]}
+tls: {name: TLS, category: Domain, aliases: [ssl, ssl/tls, tls/ssl]}
+iso_27001: {name: ISO 27001, category: Domain, aliases: [iso27001]}
+gdpr: {name: GDPR, category: Domain, aliases: []}
+burp_suite: {name: Burp Suite, category: Tool, aliases: [burp, burpsuite]}
+metasploit: {name: Metasploit, category: Tool, aliases: []}
+nmap: {name: Nmap, category: Tool, aliases: []}
+wireshark: {name: Wireshark, category: Tool, aliases: []}
+kali_linux: {name: Kali Linux, category: Tool, aliases: [kali]}
+nessus: {name: Nessus, category: Tool, aliases: []}
+trivy: {name: Trivy, category: Tool, aliases: []}
+snyk: {name: Snyk, category: Tool, aliases: []}
+
+# ======================= Data engineering, analytics and BI =======================
+spark: {name: Apache Spark, category: Framework, aliases: [spark, pyspark]}
+hadoop: {name: Apache Hadoop, category: Framework, aliases: [hadoop, hdfs, mapreduce]}
+hive: {name: Apache Hive, category: Tool, aliases: [hive]}
+flink: {name: Apache Flink, category: Framework, aliases: [flink]}
+airflow: {name: Apache Airflow, category: Tool, aliases: [airflow]}
+dbt: {name: dbt, category: Tool, aliases: [data build tool]}
+databricks: {name: Databricks, category: Tool, aliases: []}
+delta_lake: {name: Delta Lake, category: Tool, aliases: []}
+talend: {name: Talend, category: Tool, aliases: []}
+informatica: {name: Informatica, category: Tool, aliases: [informatica powercenter]}
+ssis: {name: SSIS, category: Tool, aliases: [sql server integration services]}
+ssrs: {name: SSRS, category: Tool, aliases: [sql server reporting services]}
+power_bi: {name: Power BI, category: Tool, aliases: [powerbi, ms power bi, microsoft power bi, power bi desktop, power bi service]}
+tableau: {name: Tableau, category: Tool, aliases: []}
+looker: {name: Looker, category: Tool, aliases: [looker studio]}
+qlik: {name: Qlik, category: Tool, aliases: [qlik sense, qlikview]}
+superset: {name: Apache Superset, category: Tool, aliases: [superset]}
+excel: {name: Excel, category: Tool, aliases: [ms excel, microsoft excel, advanced excel]}
+jupyter: {name: Jupyter, category: Tool, aliases: [jupyter notebook, jupyter notebooks]}
+dax: {name: DAX, category: Language, aliases: [data analysis expressions]}
+pandas: {name: Pandas, category: Framework, aliases: [pandas dataframe, pandas dataframes]}
+numpy: {name: NumPy, category: Framework, aliases: []}
+polars: {name: Polars, category: Framework, aliases: []}
+scipy: {name: SciPy, category: Framework, aliases: []}
+statsmodels: {name: statsmodels, category: Framework, aliases: []}
+matplotlib: {name: Matplotlib, category: Framework, aliases: [matplotlib.pyplot, pyplot, mpl]}
+seaborn: {name: Seaborn, category: Framework, aliases: []}
+plotly: {name: Plotly, category: Framework, aliases: [plotly dash, dash]}
+data_analysis: {name: Data Analysis, category: Domain, aliases: [data analytics]}
+data_engineering: {name: Data Engineering, category: Domain, aliases: []}
+data_warehousing: {name: Data Warehousing, category: Domain, aliases: [data warehouse]}
+data_visualization: {name: Data Visualization, category: Domain, aliases: [data visualisation]}
+business_intelligence: {name: Business Intelligence, category: Domain, aliases: [bi]}
+etl: {name: ETL, category: Domain, aliases: [etl pipelines]}
+elt: {name: ELT, category: Domain, aliases: [elt pipelines]}
+statistics: {name: Statistics, category: Domain, aliases: [statistical analysis]}
+time_series_analysis: {name: Time Series Analysis, category: Domain, aliases: [time series, time series forecasting]}
+a_b_testing: {name: A/B Testing, category: Domain, aliases: [a b testing, split testing]}
+
+# ======================= AI and machine learning: libraries and tools =======================
+pytorch: {name: PyTorch, category: Framework, aliases: [torch]}
+tensorflow: {name: TensorFlow, category: Framework, aliases: [tensorflow 2, tf2, tensorflow2]}
+keras: {name: Keras, category: Framework, aliases: []}
+jax: {name: JAX, category: Framework, aliases: []}
+scikit_learn: {name: scikit-learn, category: Framework, aliases: [sklearn, scikit learn]}
+xgboost: {name: XGBoost, category: Framework, aliases: []}
+lightgbm: {name: LightGBM, category: Framework, aliases: [light gbm]}
+catboost: {name: CatBoost, category: Framework, aliases: []}
+opencv: {name: OpenCV, category: Framework, aliases: [open cv, cv2]}
+yolo: {name: YOLO, category: Framework, aliases: [yolov5, yolov8, ultralytics]}
+nltk: {name: NLTK, category: Framework, aliases: []}
+spacy: {name: spaCy, category: Framework, aliases: []}
+huggingface: {name: Hugging Face, category: Framework, aliases: [hugging face, huggingface transformers]}
+langchain: {name: LangChain, category: Framework, aliases: [lang chain]}
+langgraph: {name: LangGraph, category: Framework, aliases: [lang graph]}
+llamaindex: {name: LlamaIndex, category: Framework, aliases: [llama index]}
+openai_api: {name: OpenAI API, category: Tool, aliases: [openai]}
+ollama: {name: Ollama, category: Tool, aliases: []}
+vllm: {name: vLLM, category: Tool, aliases: []}
+onnx: {name: ONNX, category: Tool, aliases: [onnx runtime]}
+tensorrt: {name: TensorRT, category: Tool, aliases: [tensor rt]}
+cuda: {name: CUDA, category: Tool, aliases: []}
+ray: {name: Ray, category: Framework, aliases: [ray serve]}
+mlflow: {name: MLflow, category: Tool, aliases: [ml flow]}
+kubeflow: {name: Kubeflow, category: Tool, aliases: []}
+dvc: {name: DVC, category: Tool, aliases: [data version control]}
+wandb: {name: Weights & Biases, category: Tool, aliases: [wandb, weights and biases]}
+gradio: {name: Gradio, category: Framework, aliases: []}
+streamlit: {name: Streamlit, category: Framework, aliases: []}
+
+# ======================= AI and machine learning: disciplines =======================
+artificial_intelligence: {name: Artificial Intelligence, category: Domain, aliases: [ai]}
+machine_learning: {name: Machine Learning, category: Domain, aliases: [ml]}
+deep_learning: {name: Deep Learning, category: Domain, aliases: []}
+neural_networks: {name: Neural Networks, category: Domain, aliases: [artificial neural networks, ann]}
+nlp: {name: Natural Language Processing, category: Domain, aliases: [nlp]}
+computer_vision: {name: Computer Vision, category: Domain, aliases: []}
+reinforcement_learning: {name: Reinforcement Learning, category: Domain, aliases: [rl]}
+generative_ai: {name: Generative AI, category: Domain, aliases: [genai, gen ai]}
+llm: {name: Large Language Models, category: Domain, aliases: [llm, llms]}
+rag: {name: Retrieval-Augmented Generation, category: Domain, aliases: [rag, retrieval augmented generation]}
+prompt_engineering: {name: Prompt Engineering, category: Domain, aliases: []}
+fine_tuning: {name: Model Fine-Tuning, category: Domain, aliases: [fine tuning, llm fine tuning]}
+lora: {name: LoRA, category: Domain, aliases: [low rank adaptation]}
+sft: {name: SFT, category: Domain, aliases: [supervised fine tuning]}
+grpo: {name: GRPO, category: Domain, aliases: [group relative policy optimization]}
+slm: {name: Small Language Models, category: Domain, aliases: [slm, slms, small language model]}
+litgpt: {name: Lit-GPT, category: Framework, aliases: [lit gpt]}
+debezium: {name: Debezium, category: Tool, aliases: []}
+feature_engineering: {name: Feature Engineering, category: Domain, aliases: []}
+recommendation_systems: {name: Recommendation Systems, category: Domain, aliases: [recommender systems]}
+mlops: {name: MLOps, category: Domain, aliases: [ml ops]}
+
+# ======================= UI / UX and design =======================
+figma: {name: Figma, category: Tool, aliases: [figjam]}
+sketch: {name: Sketch, category: Tool, aliases: [sketch app]}
+adobe_xd: {name: Adobe XD, category: Tool, aliases: [xd]}
+photoshop: {name: Photoshop, category: Tool, aliases: [adobe photoshop]}
+illustrator: {name: Illustrator, category: Tool, aliases: [adobe illustrator]}
+indesign: {name: InDesign, category: Tool, aliases: [adobe indesign]}
+after_effects: {name: After Effects, category: Tool, aliases: [adobe after effects]}
+premiere_pro: {name: Premiere Pro, category: Tool, aliases: [adobe premiere pro, premiere]}
+invision: {name: InVision, category: Tool, aliases: []}
+zeplin: {name: Zeplin, category: Tool, aliases: []}
+miro: {name: Miro, category: Tool, aliases: []}
+axure: {name: Axure RP, category: Tool, aliases: [axure]}
+balsamiq: {name: Balsamiq, category: Tool, aliases: []}
+framer: {name: Framer, category: Tool, aliases: []}
+blender: {name: Blender, category: Tool, aliases: []}
+ui_ux_design: {name: UI/UX Design, category: Domain, aliases: [ui/ux, ui ux design, ux/ui, ux/ui design]}
+ui_design: {name: UI Design, category: Domain, aliases: [ui, user interface design, user interface]}
+ux_design: {name: UX Design, category: Domain, aliases: [ux, user experience design, user experience]}
+ux_research: {name: UX Research, category: Domain, aliases: [user research]}
+usability_testing: {name: Usability Testing, category: Domain, aliases: [user testing]}
+wireframing: {name: Wireframing, category: Domain, aliases: [wireframes]}
+prototyping: {name: Prototyping, category: Domain, aliases: [prototypes]}
+design_systems: {name: Design Systems, category: Domain, aliases: [design system]}
+interaction_design: {name: Interaction Design, category: Domain, aliases: [ixd]}
+information_architecture: {name: Information Architecture, category: Domain, aliases: []}
+visual_design: {name: Visual Design, category: Domain, aliases: []}
+graphic_design: {name: Graphic Design, category: Domain, aliases: []}
+design_thinking: {name: Design Thinking, category: Domain, aliases: []}
+responsive_design: {name: Responsive Design, category: Domain, aliases: [responsive web design, mobile first]}
+accessibility: {name: Accessibility, category: Domain, aliases: [wcag, a11y, web accessibility]}
+pwa: {name: Progressive Web Apps, category: Domain, aliases: [pwa, progressive web app]}
+web_performance: {name: Web Performance Optimization, category: Domain, aliases: [core web vitals, web performance]}
+seo: {name: Search Engine Optimization, category: Domain, aliases: [seo]}
+
+# ======================= Game development, AR / VR =======================
+unity: {name: Unity, category: Tool, aliases: [unity 3d, unity3d]}
+unreal_engine: {name: Unreal Engine, category: Tool, aliases: [unreal, ue5, ue4]}
+godot: {name: Godot, category: Tool, aliases: [godot engine]}
+opengl: {name: OpenGL, category: Framework, aliases: [open gl]}
+vulkan: {name: Vulkan, category: Framework, aliases: []}
+arkit: {name: ARKit, category: Framework, aliases: [ar kit]}
+arcore: {name: ARCore, category: Framework, aliases: [ar core]}
+game_development: {name: Game Development, category: Domain, aliases: [game dev]}
+augmented_reality: {name: Augmented Reality, category: Domain, aliases: [ar development]}
+virtual_reality: {name: Virtual Reality, category: Domain, aliases: [vr development]}
+
+# ======================= Embedded, IoT and robotics =======================
+arduino: {name: Arduino, category: Tool, aliases: []}
+raspberry_pi: {name: Raspberry Pi, category: Tool, aliases: [raspberrypi]}
+esp32: {name: ESP32, category: Tool, aliases: [esp 32]}
+stm32: {name: STM32, category: Tool, aliases: [stm 32]}
+freertos: {name: FreeRTOS, category: Tool, aliases: [free rtos]}
+ros: {name: ROS, category: Framework, aliases: [robot operating system, ros2]}
+simulink: {name: Simulink, category: Tool, aliases: []}
+fpga: {name: FPGA, category: Domain, aliases: [field programmable gate array]}
+rtos: {name: RTOS, category: Domain, aliases: [real time operating system]}
+embedded_systems: {name: Embedded Systems, category: Domain, aliases: [embedded development, embedded programming]}
+iot: {name: Internet of Things, category: Domain, aliases: [iot]}
+ble: {name: Bluetooth Low Energy, category: Domain, aliases: [ble, bluetooth le]}
+
+# ======================= Blockchain =======================
+ethereum: {name: Ethereum, category: Tool, aliases: []}
+web3js: {name: Web3.js, category: Framework, aliases: [web3, web3 js]}
+ethersjs: {name: Ethers.js, category: Framework, aliases: [ethers, ethers js]}
+hardhat: {name: Hardhat, category: Tool, aliases: []}
+hyperledger_fabric: {name: Hyperledger Fabric, category: Tool, aliases: [hyperledger]}
+blockchain: {name: Blockchain, category: Domain, aliases: [blockchain development]}
+smart_contracts: {name: Smart Contracts, category: Domain, aliases: [smart contract]}
+
+# ======================= Enterprise platforms (ERP / CRM / low-code) =======================
+salesforce: {name: Salesforce, category: Tool, aliases: [sfdc, salesforce crm]}
+servicenow: {name: ServiceNow, category: Tool, aliases: [service now]}
+sap: {name: SAP, category: Tool, aliases: [sap erp]}
+dynamics_365: {name: Microsoft Dynamics 365, category: Tool, aliases: [dynamics 365, ms dynamics]}
+sharepoint: {name: SharePoint, category: Tool, aliases: [share point]}
+power_apps: {name: Power Apps, category: Tool, aliases: [powerapps, microsoft power apps]}
+power_automate: {name: Power Automate, category: Tool, aliases: [microsoft power automate]}
+mulesoft: {name: MuleSoft, category: Tool, aliases: [mule soft, anypoint]}
+
+# =====================================================================
+# EXTENSION (v3): more skills so that fewer skills end up Unmapped
+# =====================================================================
+
+# ======================= AI / ML / Data Science: more libraries, tools, models =======================
+gensim: {name: Gensim, category: Framework, aliases: []}
+pillow: {name: Pillow, category: Framework, aliases: [pil, python imaging library]}
+scikit_image: {name: scikit-image, category: Framework, aliases: [skimage, scikit image]}
+torchvision: {name: torchvision, category: Framework, aliases: []}
+pytorch_lightning: {name: PyTorch Lightning, category: Framework, aliases: [lightning]}
+sentence_transformers: {name: Sentence Transformers, category: Framework, aliases: [sbert, sentence-transformers]}
+tensorflow_lite: {name: TensorFlow Lite, category: Framework, aliases: [tflite, tf lite]}
+mediapipe: {name: MediaPipe, category: Framework, aliases: [media pipe]}
+detectron2: {name: Detectron2, category: Framework, aliases: []}
+tesseract: {name: Tesseract, category: Tool, aliases: [tesseract ocr, pytesseract]}
+shap: {name: SHAP, category: Framework, aliases: []}
+imbalanced_learn: {name: imbalanced-learn, category: Framework, aliases: [imblearn, imbalanced learn]}
+prophet: {name: Prophet, category: Framework, aliases: [facebook prophet, fbprophet]}
+optuna: {name: Optuna, category: Tool, aliases: []}
+tensorboard: {name: TensorBoard, category: Tool, aliases: []}
+h2o: {name: H2O, category: Framework, aliases: [h2o.ai]}
+pycaret: {name: PyCaret, category: Framework, aliases: []}
+dask: {name: Dask, category: Framework, aliases: []}
+gymnasium: {name: Gymnasium, category: Framework, aliases: [openai gym]}
+bentoml: {name: BentoML, category: Tool, aliases: []}
+triton_inference_server: {name: NVIDIA Triton, category: Tool, aliases: [triton, triton inference server]}
+crewai: {name: CrewAI, category: Framework, aliases: [crew ai]}
+autogen: {name: AutoGen, category: Framework, aliases: [auto gen]}
+semantic_kernel: {name: Semantic Kernel, category: Framework, aliases: [microsoft semantic kernel]}
+microsoft_agent_framework: {name: Microsoft Agent Framework, category: Framework, aliases: [maf, agent framework]}
+beautifulsoup: {name: BeautifulSoup, category: Framework, aliases: [bs4, beautiful soup]}
+scrapy: {name: Scrapy, category: Framework, aliases: []}
+python_requests: {name: Requests, category: Framework, aliases: [python requests]}
+bert: {name: BERT, category: Tool, aliases: [bert model]}
+gpt: {name: GPT, category: Tool, aliases: [gpt-3, gpt-4, chatgpt, gpt models]}
+llama: {name: LLaMA, category: Tool, aliases: [llama 2, llama 3, meta llama]}
+gemini: {name: Gemini, category: Tool, aliases: [google gemini]}
+claude: {name: Claude, category: Tool, aliases: [anthropic claude, claude api, anthropic api]}
+stable_diffusion: {name: Stable Diffusion, category: Tool, aliases: []}
+google_colab: {name: Google Colab, category: Tool, aliases: [colab, colaboratory]}
+conda: {name: Conda, category: Tool, aliases: [anaconda, miniconda]}
+pip: {name: pip, category: Tool, aliases: [pypi]}
+poetry: {name: Poetry, category: Tool, aliases: [python poetry]}
+gunicorn: {name: Gunicorn, category: Tool, aliases: []}
+asyncio: {name: asyncio, category: Framework, aliases: [python asyncio]}
+pydantic: {name: Pydantic, category: Framework, aliases: []}
+pyqt: {name: PyQt, category: Framework, aliases: [pyqt5, pyside]}
+tkinter: {name: Tkinter, category: Framework, aliases: []}
+
+# ======================= AI / ML / Data Science: concepts and techniques =======================
+data_science: {name: Data Science, category: Domain, aliases: []}
+big_data: {name: Big Data, category: Domain, aliases: [big data analytics]}
+supervised_learning: {name: Supervised Learning, category: Domain, aliases: []}
+unsupervised_learning: {name: Unsupervised Learning, category: Domain, aliases: []}
+regression_analysis: {name: Regression Analysis, category: Domain, aliases: [regression, regression models]}
+linear_regression: {name: Linear Regression, category: Domain, aliases: []}
+logistic_regression: {name: Logistic Regression, category: Domain, aliases: []}
+classification: {name: Classification, category: Domain, aliases: [classification algorithms, classification models]}
+clustering: {name: Clustering, category: Domain, aliases: [cluster analysis]}
+k_means: {name: K-Means, category: Domain, aliases: [kmeans, k means clustering]}
+decision_trees: {name: Decision Trees, category: Domain, aliases: [decision tree]}
+random_forest: {name: Random Forest, category: Domain, aliases: [random forests]}
+gradient_boosting: {name: Gradient Boosting, category: Domain, aliases: [gbm, gradient boosted trees]}
+svm: {name: Support Vector Machines, category: Domain, aliases: [svm, support vector machine]}
+naive_bayes: {name: Naive Bayes, category: Domain, aliases: []}
+knn: {name: K-Nearest Neighbors, category: Domain, aliases: [knn, k nearest neighbors, k nearest neighbours]}
+pca: {name: Principal Component Analysis, category: Domain, aliases: [pca]}
+dimensionality_reduction: {name: Dimensionality Reduction, category: Domain, aliases: []}
+ensemble_learning: {name: Ensemble Learning, category: Domain, aliases: [ensemble methods, ensemble models]}
+cross_validation: {name: Cross-Validation, category: Domain, aliases: [cross validation, k fold cross validation]}
+hyperparameter_tuning: {name: Hyperparameter Tuning, category: Domain, aliases: [hyperparameter optimization, hyper parameter tuning]}
+model_evaluation: {name: Model Evaluation, category: Domain, aliases: [model validation, model performance evaluation]}
+eda: {name: Exploratory Data Analysis, category: Domain, aliases: [eda]}
+data_preprocessing: {name: Data Preprocessing, category: Domain, aliases: [data cleaning, data wrangling, data preparation, data cleansing, data munging, data pre-processing]}
+data_mining: {name: Data Mining, category: Domain, aliases: []}
+anomaly_detection: {name: Anomaly Detection, category: Domain, aliases: [outlier detection]}
+transfer_learning: {name: Transfer Learning, category: Domain, aliases: []}
+cnn: {name: Convolutional Neural Networks, category: Domain, aliases: [cnn, cnns, convnets]}
+rnn: {name: Recurrent Neural Networks, category: Domain, aliases: [rnn, rnns]}
+lstm: {name: LSTM, category: Domain, aliases: [long short term memory]}
+gan: {name: Generative Adversarial Networks, category: Domain, aliases: [gan, gans]}
+transformer_models: {name: Transformer Models, category: Domain, aliases: [transformer architecture, transformers]}
+autoencoders: {name: Autoencoders, category: Domain, aliases: [autoencoder]}
+object_detection: {name: Object Detection, category: Domain, aliases: []}
+image_classification: {name: Image Classification, category: Domain, aliases: []}
+image_segmentation: {name: Image Segmentation, category: Domain, aliases: [semantic segmentation]}
+ocr: {name: OCR, category: Domain, aliases: [optical character recognition]}
+speech_recognition: {name: Speech Recognition, category: Domain, aliases: [asr, speech to text]}
+text_classification: {name: Text Classification, category: Domain, aliases: []}
+sentiment_analysis: {name: Sentiment Analysis, category: Domain, aliases: []}
+ner: {name: Named Entity Recognition, category: Domain, aliases: [ner]}
+text_summarization: {name: Text Summarization, category: Domain, aliases: [text summarisation]}
+machine_translation: {name: Machine Translation, category: Domain, aliases: []}
+chatbots: {name: Chatbots, category: Domain, aliases: [chatbot development, conversational ai]}
+ai_agents: {name: AI Agents, category: Domain, aliases: [agentic ai, ai agent, llm agents, multi agent systems]}
+knowledge_graphs: {name: Knowledge Graphs, category: Domain, aliases: [knowledge graph]}
+embeddings: {name: Embeddings, category: Domain, aliases: [vector embeddings, text embeddings, word embeddings]}
+vector_databases: {name: Vector Databases, category: Domain, aliases: [vector database, vector db, vector search]}
+semantic_search: {name: Semantic Search, category: Domain, aliases: []}
+model_deployment: {name: Model Deployment, category: Domain, aliases: [ml model deployment, model serving]}
+model_monitoring: {name: Model Monitoring, category: Domain, aliases: []}
+ml_pipelines: {name: ML Pipelines, category: Domain, aliases: [machine learning pipelines]}
+automl: {name: AutoML, category: Domain, aliases: [auto ml]}
+explainable_ai: {name: Explainable AI, category: Domain, aliases: [xai, model interpretability]}
+predictive_modeling: {name: Predictive Modeling, category: Domain, aliases: [predictive modelling, predictive analytics]}
+data_annotation: {name: Data Annotation, category: Domain, aliases: [data labeling, data labelling]}
+llmops: {name: LLMOps, category: Domain, aliases: [llm ops]}
+probability: {name: Probability, category: Domain, aliases: [probability theory]}
+linear_algebra: {name: Linear Algebra, category: Domain, aliases: []}
+hypothesis_testing: {name: Hypothesis Testing, category: Domain, aliases: [statistical testing]}
+bayesian_statistics: {name: Bayesian Statistics, category: Domain, aliases: [bayesian inference]}
+
+# ======================= Data engineering and analytics: more =======================
+data_pipelines: {name: Data Pipelines, category: Domain, aliases: [data pipeline]}
+data_lake: {name: Data Lake, category: Domain, aliases: [data lakes, data lakehouse]}
+data_governance: {name: Data Governance, category: Domain, aliases: []}
+data_quality: {name: Data Quality, category: Domain, aliases: []}
+apache_nifi: {name: Apache NiFi, category: Tool, aliases: [nifi]}
+trino: {name: Trino, category: Tool, aliases: [presto, prestodb]}
+kafka_streams: {name: Kafka Streams, category: Framework, aliases: []}
+google_analytics: {name: Google Analytics, category: Tool, aliases: [ga4]}
+adobe_analytics: {name: Adobe Analytics, category: Tool, aliases: []}
+mixpanel: {name: Mixpanel, category: Tool, aliases: []}
+amplitude: {name: Amplitude, category: Tool, aliases: []}
+google_sheets: {name: Google Sheets, category: Tool, aliases: []}
+alteryx: {name: Alteryx, category: Tool, aliases: []}
+spss: {name: SPSS, category: Tool, aliases: [ibm spss]}
+stata: {name: Stata, category: Tool, aliases: []}
+tidyverse: {name: Tidyverse, category: Framework, aliases: []}
+ggplot2: {name: ggplot2, category: Framework, aliases: [ggplot]}
+dplyr: {name: dplyr, category: Framework, aliases: []}
+r_shiny: {name: Shiny, category: Framework, aliases: [r shiny]}
+power_query: {name: Power Query, category: Tool, aliases: []}
+hbase: {name: Apache HBase, category: Tool, aliases: [hbase]}
+couchdb: {name: CouchDB, category: Tool, aliases: [couch db]}
+couchbase: {name: Couchbase, category: Tool, aliases: []}
+timescaledb: {name: TimescaleDB, category: Tool, aliases: [timescale]}
+qdrant: {name: Qdrant, category: Tool, aliases: []}
+supabase: {name: Supabase, category: Tool, aliases: []}
+cockroachdb: {name: CockroachDB, category: Tool, aliases: [cockroach db]}
+teradata: {name: Teradata, category: Tool, aliases: []}
+db2: {name: IBM Db2, category: Tool, aliases: [db2, ibm db2]}
+etcd: {name: etcd, category: Tool, aliases: []}
+zookeeper: {name: Apache ZooKeeper, category: Tool, aliases: [zookeeper]}
+solr: {name: Apache Solr, category: Tool, aliases: [solr]}
+
+# ======================= Web and application development: more =======================
+json: {name: JSON, category: Language, aliases: []}
+yaml: {name: YAML, category: Language, aliases: [yml]}
+svg: {name: SVG, category: Language, aliases: [scalable vector graphics]}
+http: {name: HTTP, category: Domain, aliases: [https, http protocol]}
+ajax: {name: AJAX, category: Domain, aliases: []}
+web_components: {name: Web Components, category: Domain, aliases: []}
+material_design: {name: Material Design, category: Domain, aliases: []}
+apollo_graphql: {name: Apollo GraphQL, category: Framework, aliases: [apollo, apollo client, apollo server]}
+prisma: {name: Prisma, category: Framework, aliases: []}
+typeorm: {name: TypeORM, category: Framework, aliases: [type orm]}
+sequelize: {name: Sequelize, category: Framework, aliases: []}
+mongoose: {name: Mongoose, category: Framework, aliases: []}
+socketio: {name: Socket.IO, category: Framework, aliases: [socket io]}
+pinia: {name: Pinia, category: Framework, aliases: []}
+vuex: {name: Vuex, category: Framework, aliases: []}
+react_router: {name: React Router, category: Framework, aliases: []}
+ngrx: {name: NgRx, category: Framework, aliases: []}
+webgl: {name: WebGL, category: Framework, aliases: []}
+gsap: {name: GSAP, category: Framework, aliases: [greensock]}
+framer_motion: {name: Framer Motion, category: Framework, aliases: []}
+shadcn_ui: {name: shadcn/ui, category: Framework, aliases: [shadcn]}
+wordpress: {name: WordPress, category: Framework, aliases: [word press, wp]}
+drupal: {name: Drupal, category: Framework, aliases: []}
+shopify: {name: Shopify, category: Tool, aliases: []}
+magento: {name: Magento, category: Framework, aliases: [adobe commerce]}
+woocommerce: {name: WooCommerce, category: Framework, aliases: [woo commerce]}
+strapi: {name: Strapi, category: Framework, aliases: []}
+codeigniter: {name: CodeIgniter, category: Framework, aliases: [code igniter]}
+expo: {name: Expo, category: Framework, aliases: [expo go]}
+uikit: {name: UIKit, category: Framework, aliases: [ui kit]}
+blazor: {name: Blazor, category: Framework, aliases: []}
+wpf: {name: WPF, category: Framework, aliases: [windows presentation foundation]}
+winforms: {name: Windows Forms, category: Framework, aliases: [winforms]}
+linq: {name: LINQ, category: Framework, aliases: []}
+jakarta_ee: {name: Jakarta EE, category: Framework, aliases: [java ee, j2ee, jee]}
+quarkus: {name: Quarkus, category: Framework, aliases: []}
+micronaut: {name: Micronaut, category: Framework, aliases: []}
+mockito: {name: Mockito, category: Framework, aliases: []}
+jdbc: {name: JDBC, category: Framework, aliases: []}
+jpa: {name: JPA, category: Framework, aliases: [java persistence api]}
+spring_security: {name: Spring Security, category: Framework, aliases: []}
+spring_cloud: {name: Spring Cloud, category: Framework, aliases: []}
+lighthouse: {name: Lighthouse, category: Tool, aliases: [google lighthouse]}
+chrome_devtools: {name: Chrome DevTools, category: Tool, aliases: [chrome dev tools, browser devtools]}
+visual_studio: {name: Visual Studio, category: Tool, aliases: [ms visual studio]}
+vscode: {name: VS Code, category: Tool, aliases: [visual studio code, vs code]}
+intellij_idea: {name: IntelliJ IDEA, category: Tool, aliases: [intellij]}
+pycharm: {name: PyCharm, category: Tool, aliases: []}
+eclipse: {name: Eclipse, category: Tool, aliases: [eclipse ide]}
+
+# ======================= Cloud and DevOps: more =======================
+vpc: {name: Amazon VPC, category: Tool, aliases: [aws vpc, vpc]}
+elb: {name: Elastic Load Balancing, category: Tool, aliases: [elb, aws elb, application load balancer]}
+aurora: {name: Amazon Aurora, category: Tool, aliases: [aws aurora]}
+elasticache: {name: Amazon ElastiCache, category: Tool, aliases: [aws elasticache]}
+eventbridge: {name: Amazon EventBridge, category: Tool, aliases: [aws eventbridge]}
+step_functions: {name: AWS Step Functions, category: Tool, aliases: [step functions]}
+aws_api_gateway: {name: Amazon API Gateway, category: Tool, aliases: [aws api gateway, api gateway]}
+cognito: {name: Amazon Cognito, category: Tool, aliases: [aws cognito]}
+kms: {name: AWS KMS, category: Tool, aliases: [kms, key management service]}
+codepipeline: {name: AWS CodePipeline, category: Tool, aliases: [aws codepipeline]}
+codebuild: {name: AWS CodeBuild, category: Tool, aliases: [aws codebuild]}
+fargate: {name: AWS Fargate, category: Tool, aliases: [fargate]}
+ecr: {name: Amazon ECR, category: Tool, aliases: [aws ecr]}
+cloudtrail: {name: AWS CloudTrail, category: Tool, aliases: [cloudtrail]}
+quicksight: {name: Amazon QuickSight, category: Tool, aliases: [aws quicksight]}
+rekognition: {name: Amazon Rekognition, category: Tool, aliases: [aws rekognition]}
+textract: {name: Amazon Textract, category: Tool, aliases: [aws textract]}
+azure_sql: {name: Azure SQL, category: Tool, aliases: [azure sql database]}
+azure_blob_storage: {name: Azure Blob Storage, category: Tool, aliases: [azure storage, blob storage]}
+azure_app_service: {name: Azure App Service, category: Tool, aliases: []}
+azure_key_vault: {name: Azure Key Vault, category: Tool, aliases: [key vault]}
+azure_monitor: {name: Azure Monitor, category: Tool, aliases: [application insights]}
+azure_event_hubs: {name: Azure Event Hubs, category: Tool, aliases: [event hubs]}
+azure_service_bus: {name: Azure Service Bus, category: Tool, aliases: [service bus]}
+azure_logic_apps: {name: Azure Logic Apps, category: Tool, aliases: [logic apps]}
+azure_ai_services: {name: Azure AI Services, category: Tool, aliases: [azure cognitive services]}
+bicep: {name: Bicep, category: Tool, aliases: [azure bicep, arm templates]}
+microsoft_fabric: {name: Microsoft Fabric, category: Tool, aliases: [ms fabric]}
+power_platform: {name: Power Platform, category: Tool, aliases: [microsoft power platform]}
+cloud_storage: {name: Google Cloud Storage, category: Tool, aliases: [gcs, gcp cloud storage]}
+cloud_run: {name: Cloud Run, category: Tool, aliases: [google cloud run]}
+cloud_functions: {name: Cloud Functions, category: Tool, aliases: [google cloud functions]}
+compute_engine: {name: Compute Engine, category: Tool, aliases: [google compute engine, gce]}
+cloud_sql: {name: Cloud SQL, category: Tool, aliases: [google cloud sql]}
+bigtable: {name: Bigtable, category: Tool, aliases: [cloud bigtable]}
+spanner: {name: Cloud Spanner, category: Tool, aliases: [spanner]}
+dataproc: {name: Dataproc, category: Tool, aliases: [google dataproc]}
+cloud_composer: {name: Cloud Composer, category: Tool, aliases: [google cloud composer]}
+docker_swarm: {name: Docker Swarm, category: Tool, aliases: []}
+rancher: {name: Rancher, category: Tool, aliases: []}
+minikube: {name: Minikube, category: Tool, aliases: []}
+kong: {name: Kong, category: Tool, aliases: [kong gateway]}
+traefik: {name: Traefik, category: Tool, aliases: []}
+envoy: {name: Envoy, category: Tool, aliases: [envoy proxy]}
+serverless_framework: {name: Serverless Framework, category: Tool, aliases: []}
+logstash: {name: Logstash, category: Tool, aliases: []}
+fluentd: {name: Fluentd, category: Tool, aliases: []}
+loki: {name: Grafana Loki, category: Tool, aliases: [loki]}
+sentry: {name: Sentry, category: Tool, aliases: []}
+appdynamics: {name: AppDynamics, category: Tool, aliases: [app dynamics]}
+opsgenie: {name: Opsgenie, category: Tool, aliases: []}
+ssh: {name: SSH, category: Tool, aliases: [secure shell]}
+ubuntu: {name: Ubuntu, category: Tool, aliases: [ubuntu linux]}
+rhel: {name: Red Hat Enterprise Linux, category: Tool, aliases: [rhel, red hat linux, centos]}
+macos: {name: macOS, category: Tool, aliases: [mac os, os x]}
+windows: {name: Windows, category: Tool, aliases: [microsoft windows, windows os]}
+serverless: {name: Serverless, category: Domain, aliases: [serverless architecture, serverless computing]}
+service_mesh: {name: Service Mesh, category: Domain, aliases: []}
+chaos_engineering: {name: Chaos Engineering, category: Domain, aliases: []}
+high_availability: {name: High Availability, category: Domain, aliases: [ha, fault tolerance]}
+configuration_management: {name: Configuration Management, category: Domain, aliases: []}
+release_management: {name: Release Management, category: Domain, aliases: []}
+incident_management: {name: Incident Management, category: Domain, aliases: [incident response management]}
+linux_administration: {name: Linux Administration, category: Domain, aliases: [linux admin, system administration, sysadmin]}
+itil: {name: ITIL, category: Domain, aliases: []}
+cdn: {name: Content Delivery Network, category: Domain, aliases: [cdn]}
+vpn: {name: VPN, category: Domain, aliases: [virtual private network]}
+firewalls: {name: Firewalls, category: Domain, aliases: [firewall, firewall management]}
+routing_and_switching: {name: Routing and Switching, category: Domain, aliases: [routing switching]}
+bgp: {name: BGP, category: Domain, aliases: [border gateway protocol]}
+ospf: {name: OSPF, category: Domain, aliases: []}
+vlan: {name: VLAN, category: Domain, aliases: []}
+sd_wan: {name: SD-WAN, category: Domain, aliases: [sdwan]}
+
+# ======================= Security: more =======================
+zero_trust: {name: Zero Trust, category: Domain, aliases: [zero trust architecture]}
+incident_response: {name: Incident Response, category: Domain, aliases: []}
+threat_modeling: {name: Threat Modeling, category: Domain, aliases: [threat modelling]}
+malware_analysis: {name: Malware Analysis, category: Domain, aliases: []}
+digital_forensics: {name: Digital Forensics, category: Domain, aliases: [dfir]}
+network_security: {name: Network Security, category: Domain, aliases: []}
+application_security: {name: Application Security, category: Domain, aliases: [appsec]}
+cloud_security: {name: Cloud Security, category: Domain, aliases: []}
+intrusion_detection: {name: Intrusion Detection, category: Domain, aliases: [ids, ips, ids/ips]}
+pki: {name: Public Key Infrastructure, category: Domain, aliases: [pki]}
+sso: {name: Single Sign-On, category: Domain, aliases: [sso, single sign on]}
+ldap: {name: LDAP, category: Domain, aliases: []}
+nist_csf: {name: NIST Cybersecurity Framework, category: Domain, aliases: [nist, nist csf]}
+pci_dss: {name: PCI DSS, category: Domain, aliases: [pci]}
+hipaa: {name: HIPAA, category: Domain, aliases: []}
+soc2: {name: SOC 2, category: Domain, aliases: [soc 2, soc2]}
+sast_dast: {name: SAST and DAST, category: Domain, aliases: [sast, dast, static application security testing]}
+owasp_zap: {name: OWASP ZAP, category: Tool, aliases: [zap, zaproxy]}
+microsoft_sentinel: {name: Microsoft Sentinel, category: Tool, aliases: [azure sentinel]}
+okta: {name: Okta, category: Tool, aliases: []}
+keycloak: {name: Keycloak, category: Tool, aliases: []}
+auth0: {name: Auth0, category: Tool, aliases: []}
+
+# ======================= Testing and QA: more =======================
+nunit: {name: NUnit, category: Tool, aliases: []}
+xunit: {name: xUnit, category: Tool, aliases: [xunit.net]}
+rest_assured: {name: REST Assured, category: Tool, aliases: [restassured]}
+gatling: {name: Gatling, category: Tool, aliases: []}
+browserstack: {name: BrowserStack, category: Tool, aliases: [browser stack]}
+testrail: {name: TestRail, category: Tool, aliases: [test rail]}
+exploratory_testing: {name: Exploratory Testing, category: Domain, aliases: []}
+uat: {name: User Acceptance Testing, category: Domain, aliases: [uat]}
+security_testing: {name: Security Testing, category: Domain, aliases: []}
+test_case_design: {name: Test Case Design, category: Domain, aliases: [test cases, test case writing]}
+sdlc: {name: Software Development Life Cycle, category: Domain, aliases: [sdlc]}
+stlc: {name: Software Testing Life Cycle, category: Domain, aliases: [stlc]}
+debugging: {name: Debugging, category: Domain, aliases: [troubleshooting, bug fixing]}
+
+# ======================= Project, product and business analysis =======================
+asana: {name: Asana, category: Tool, aliases: []}
+notion: {name: Notion, category: Tool, aliases: []}
+slack: {name: Slack, category: Tool, aliases: []}
+ms_project: {name: Microsoft Project, category: Tool, aliases: [ms project]}
+monday_com: {name: monday.com, category: Tool, aliases: [monday]}
+project_management: {name: Project Management, category: Domain, aliases: [project planning]}
+product_management: {name: Product Management, category: Domain, aliases: []}
+waterfall: {name: Waterfall, category: Domain, aliases: [waterfall methodology]}
+safe_agile: {name: Scaled Agile Framework, category: Domain, aliases: [safe agile, scaled agile]}
+business_analysis: {name: Business Analysis, category: Domain, aliases: []}
+requirements_gathering: {name: Requirements Gathering, category: Domain, aliases: [requirement gathering, requirements analysis]}
+uml: {name: UML, category: Domain, aliases: [unified modeling language]}
+bpmn: {name: BPMN, category: Domain, aliases: []}
+technical_writing: {name: Technical Writing, category: Domain, aliases: [technical documentation]}
+
+# ======================= UI / UX and creative: more =======================
+adobe_creative_suite: {name: Adobe Creative Suite, category: Tool, aliases: [adobe cc, adobe creative cloud]}
+coreldraw: {name: CorelDRAW, category: Tool, aliases: [corel draw]}
+canva: {name: Canva, category: Tool, aliases: []}
+protopie: {name: ProtoPie, category: Tool, aliases: []}
+hotjar: {name: Hotjar, category: Tool, aliases: []}
+maya: {name: Autodesk Maya, category: Tool, aliases: [maya]}
+ux_writing: {name: UX Writing, category: Domain, aliases: [content design]}
+user_journey_mapping: {name: User Journey Mapping, category: Domain, aliases: [journey mapping, customer journey mapping]}
+card_sorting: {name: Card Sorting, category: Domain, aliases: []}
+heuristic_evaluation: {name: Heuristic Evaluation, category: Domain, aliases: []}
+typography: {name: Typography, category: Domain, aliases: []}
+color_theory: {name: Color Theory, category: Domain, aliases: [colour theory]}
+motion_design: {name: Motion Design, category: Domain, aliases: [motion graphics]}
+modeling_3d: {name: 3D Modeling, category: Domain, aliases: [3d modelling, 3d design]}
+video_editing: {name: Video Editing, category: Domain, aliases: []}
+
+# ======================= Embedded, IoT, hardware =======================
+uart: {name: UART, category: Domain, aliases: []}
+i2c: {name: I2C, category: Domain, aliases: [i2c protocol]}
+spi: {name: SPI, category: Domain, aliases: [spi protocol]}
+can_bus: {name: CAN Bus, category: Domain, aliases: [can protocol, can bus protocol]}
+modbus: {name: Modbus, category: Domain, aliases: []}
+lorawan: {name: LoRaWAN, category: Domain, aliases: []}
+zigbee: {name: Zigbee, category: Domain, aliases: []}
+plc: {name: PLC Programming, category: Domain, aliases: [plc, programmable logic controllers]}
+scada: {name: SCADA, category: Domain, aliases: []}
+labview: {name: LabVIEW, category: Tool, aliases: [lab view]}
+pcb_design: {name: PCB Design, category: Domain, aliases: [pcb layout]}
+altium: {name: Altium Designer, category: Tool, aliases: [altium]}
+embedded_linux: {name: Embedded Linux, category: Domain, aliases: [yocto]}
+microcontrollers: {name: Microcontrollers, category: Domain, aliases: [microcontroller programming]}
+jetson: {name: NVIDIA Jetson, category: Tool, aliases: [jetson nano, jetson orin]}
+tinyml: {name: TinyML, category: Domain, aliases: [tiny ml]}
+
+# ======================= Blockchain: more =======================
+truffle: {name: Truffle, category: Tool, aliases: [truffle suite]}
+ipfs: {name: IPFS, category: Tool, aliases: []}
+solana: {name: Solana, category: Tool, aliases: []}
+bitcoin: {name: Bitcoin, category: Tool, aliases: []}
+defi: {name: DeFi, category: Domain, aliases: [decentralized finance]}
+
+# ======================= Enterprise, RPA, low-code =======================
+workday: {name: Workday, category: Tool, aliases: []}
+netsuite: {name: Oracle NetSuite, category: Tool, aliases: [netsuite]}
+odoo: {name: Odoo, category: Tool, aliases: []}
+tally: {name: Tally, category: Tool, aliases: [tally erp, tally prime]}
+zoho: {name: Zoho, category: Tool, aliases: [zoho crm]}
+hubspot: {name: HubSpot, category: Tool, aliases: [hub spot]}
+zendesk: {name: Zendesk, category: Tool, aliases: []}
+sap_hana: {name: SAP HANA, category: Tool, aliases: [hana]}
+sap_s4hana: {name: SAP S/4HANA, category: Tool, aliases: [s4hana, sap s4 hana]}
+uipath: {name: UiPath, category: Tool, aliases: [ui path]}
+automation_anywhere: {name: Automation Anywhere, category: Tool, aliases: []}
+zapier: {name: Zapier, category: Tool, aliases: []}
+rpa: {name: Robotic Process Automation, category: Domain, aliases: [rpa]}
+low_code: {name: Low-Code Development, category: Domain, aliases: [low code, no code, low code no code]}
+
+# ======================= Soft skills (standard names) =======================
+communication: {name: Communication, category: Soft skill, aliases: [communication skills, verbal communication, written communication, oral communication, verbal and written communication, interpersonal communication, interpersonal skills]}
+teamwork: {name: Teamwork, category: Soft skill, aliases: [team work, team player, collaboration, collaborative, cross functional collaboration]}
+problem_solving: {name: Problem Solving, category: Soft skill, aliases: [problem solving skills, problem-solving]}
+analytical_thinking: {name: Analytical Thinking, category: Soft skill, aliases: [analytical skills, analytical ability, analytical mindset]}
+critical_thinking: {name: Critical Thinking, category: Soft skill, aliases: []}
+leadership: {name: Leadership, category: Soft skill, aliases: [team leadership, leadership skills]}
+time_management: {name: Time Management, category: Soft skill, aliases: [prioritization, prioritisation]}
+adaptability: {name: Adaptability, category: Soft skill, aliases: []}
+creativity: {name: Creativity, category: Soft skill, aliases: [creative thinking, innovation]}
+attention_to_detail: {name: Attention to Detail, category: Soft skill, aliases: [detail oriented, detail-oriented]}
+stakeholder_management: {name: Stakeholder Management, category: Soft skill, aliases: [stakeholder communication]}
+mentoring: {name: Mentoring, category: Soft skill, aliases: [coaching, mentorship]}
+decision_making: {name: Decision Making, category: Soft skill, aliases: [decision-making]}
+presentation_skills: {name: Presentation Skills, category: Soft skill, aliases: [presentation, public speaking]}
+negotiation: {name: Negotiation, category: Soft skill, aliases: [negotiation skills]}
+conflict_resolution: {name: Conflict Resolution, category: Soft skill, aliases: []}
+customer_focus: {name: Customer Focus, category: Soft skill, aliases: [customer service, customer orientation]}
+self_motivation: {name: Self-Motivation, category: Soft skill, aliases: [self motivated, self starter, proactive]}
+ownership: {name: Ownership, category: Soft skill, aliases: [accountability, sense of ownership]}
+emotional_intelligence: {name: Emotional Intelligence, category: Soft skill, aliases: []}

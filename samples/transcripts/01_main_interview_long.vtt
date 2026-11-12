@@ -1,0 +1,163 @@
+WEBVTT
+
+NOTE Generated for testing. Microsoft Teams style speaker tags.
+
+1
+00:00:03.000 --> 00:00:06.846
+<v Neha Verma>Hi Rahul, thanks for joining. Can you hear me okay?</v>
+
+2
+00:00:08.046 --> 00:00:12.662
+<v Rahul Mehta>Yes, hi Neha, I can hear you fine. Thanks for having me.</v>
+
+3
+00:00:13.862 --> 00:00:27.323
+<v Neha Verma>Great. So I'm Neha, I'm a senior engineer on the platform team. Today we'll talk about your background, then some Python, databases, API design and a small design discussion. Let's start with a quick intro.</v>
+
+4
+00:00:28.523 --> 00:00:52.369
+<v Rahul Mehta>Sure. So I have about four years of experience as a backend developer. Currently I work at a logistics startup in Pune where I mostly build Python services using FastAPI and Django. Before that I was at a services company for one year, working on a Flask-based reporting tool. Outside work I contribute a bit to open source, mostly small bug fixes.</v>
+
+5
+00:00:53.569 --> 00:00:57.415
+<v Neha Verma>Nice. Tell me about a Python project you're proud of.</v>
+
+6
+00:00:58.615 --> 00:01:33.231
+<v Rahul Mehta>Yeah, so one thing was an order tracking service. We had around two hundred thousand shipment updates coming in every hour from different courier partners, and the old code was processing them one by one in a Celery task. Um, it was lagging by almost thirty minutes at peak. I profiled it using cProfile and found most of the time was spent waiting on HTTP calls to partner APIs, so I moved that part to asyncio with aiohttp and batched the database writes. Lag came down to under two minutes.</v>
+
+7
+00:01:34.431 --> 00:01:38.277
+<v Neha Verma>Okay, and how does asyncio differ from threads in Python?</v>
+
+8
+00:01:39.477 --> 00:02:11.015
+<v Rahul Mehta>So asyncio is single-threaded, cooperative multitasking. The event loop switches between coroutines only at await points, so it's great for I/O-bound work. Threads are preemptive, but because of the GIL only one thread runs Python bytecode at a time, so threads help with I/O but not CPU-bound work. For CPU-bound I'd use multiprocessing or push it to a worker. One gotcha is that a blocking call inside a coroutine blocks the whole loop, which actually bit us once with a sync library.</v>
+
+9
+00:02:12.215 --> 00:02:15.677
+<v Neha Verma>Good. What about generators, when would you use them?</v>
+
+10
+00:02:16.877 --> 00:02:41.492
+<v Rahul Mehta>Generators are useful when you don't want to load everything into memory. For example, we had a CSV export of millions of rows, so I used a generator that yields rows in chunks from a server-side cursor and streams it through the response. Memory stayed flat. I also use decorators quite a bit, like a retry decorator with exponential backoff for flaky partner calls.</v>
+
+11
+00:02:42.692 --> 00:02:46.538
+<v Neha Verma>Great. Let's move to databases. You've worked with PostgreSQL, right?</v>
+
+12
+00:02:47.738 --> 00:02:51.585
+<v Rahul Mehta>Yes, mostly PostgreSQL, and a little bit of MySQL earlier.</v>
+
+13
+00:02:52.785 --> 00:02:57.400
+<v Neha Verma>So you'd agree that adding an index always makes queries faster, right?</v>
+
+14
+00:02:58.600 --> 00:03:14.754
+<v Rahul Mehta>Um, not always, actually. Indexes speed up reads but slow down writes, and they take space. If the column has low cardinality, like a boolean, the planner may ignore it anyway. I usually check with EXPLAIN ANALYZE before and after adding one.</v>
+
+15
+00:03:15.954 --> 00:03:20.954
+<v Neha Verma>Okay fair. Can you explain the difference between INNER JOIN and LEFT JOIN?</v>
+
+16
+00:03:22.154 --> 00:03:41.769
+<v Rahul Mehta>Inner join returns only rows that match in both tables. Left join returns all rows from the left table and the matching ones from the right, with nulls where there's no match. I use left join a lot for things like show all shipments even if no delivery event exists yet.</v>
+
+17
+00:03:42.969 --> 00:03:45.662
+<v Neha Verma>And window functions? Have you used them?</v>
+
+18
+00:03:46.862 --> 00:04:05.708
+<v Rahul Mehta>Uh, I have used ROW_NUMBER once or twice, to get the latest status per shipment. But honestly I'm not very comfortable with the more complex ones like LAG or frames. I usually do that kind of thing in Python after fetching the data, which I know is not ideal.</v>
+
+19
+00:04:06.908 --> 00:04:12.292
+<v Neha Verma>That's okay. Let's talk APIs. How would you design a REST API for shipments?</v>
+
+20
+00:04:13.492 --> 00:04:46.185
+<v Rahul Mehta>So resources would be nouns, like slash shipments and slash shipments slash id, and slash shipments slash id slash events for the tracking events. GET for reads, POST to create, PATCH for partial updates, and DELETE only if really needed, I'd probably soft delete. I'd return proper status codes, 201 on create with a Location header, 404 when not found, 422 for validation errors. For lists I'd add cursor-based pagination rather than offset, because offset gets slow and inconsistent when new rows are coming in.</v>
+
+21
+00:04:47.385 --> 00:04:50.846
+<v Neha Verma>What about idempotency, say for payments or creating shipments?</v>
+
+22
+00:04:52.046 --> 00:05:16.662
+<v Rahul Mehta>Yes, for POST requests that must not be duplicated I'd accept an Idempotency-Key header, store the key with the response for some time, and if the same key comes again return the stored response instead of processing again. We do this in our pickup booking endpoint because mobile clients retry on bad networks. Versioning I'd do through the URL prefix like v1 for simplicity.</v>
+
+23
+00:05:17.862 --> 00:05:21.708
+<v Neha Verma>Good. Now how do you handle authentication in those APIs?</v>
+
+24
+00:05:22.908 --> 00:05:36.754
+<v Rahul Mehta>We use JWT access tokens that are short lived, around fifteen minutes, with refresh tokens stored server-side so we can revoke them. Passwords hashed with bcrypt. For service to service we use API keys with scopes.</v>
+
+25
+00:05:37.954 --> 00:05:48.338
+<v Neha Verma>Okay. Let's do a small design question. Imagine we need a service that sends notifications, email and SMS, to millions of users. How would you design it?</v>
+
+26
+00:05:49.538 --> 00:06:09.154
+<v Rahul Mehta>Um, okay. So... I think I would have an API that receives the request and then put it in a queue, maybe RabbitMQ or Kafka, and then workers will pick up from the queue and send. And, uh, for scaling we can add more workers. And maybe use a cache also.</v>
+
+27
+00:06:10.354 --> 00:06:14.200
+<v Neha Verma>Anything about failures, or rate limits from the email provider?</v>
+
+28
+00:06:15.400 --> 00:06:30.400
+<v Rahul Mehta>Yeah, we should retry if it fails. I haven't really designed something at that scale, to be honest. I would need to think about it more, like how to avoid sending twice, and the priority, I'm not fully sure.</v>
+
+29
+00:06:31.600 --> 00:06:36.600
+<v Neha Verma>That's fine, honest answer. Let me ask something different. Have you used Docker?</v>
+
+30
+00:06:37.800 --> 00:07:05.492
+<v Rahul Mehta>Yes, daily. All our services run in containers. I write multi-stage Dockerfiles to keep images small, for example a builder stage with build tools and a slim final image with only the runtime. Locally I use docker compose to run the app with Postgres and Redis. I understand layers and caching, so I keep the requirements copy before the source copy. I haven't written Docker networking setups beyond the compose defaults though.</v>
+
+31
+00:07:06.692 --> 00:07:10.923
+<v Neha Verma>Alright. How do you handle disagreements with teammates on technical decisions?</v>
+
+32
+00:07:12.123 --> 00:07:44.815
+<v Rahul Mehta>I try to move the discussion from opinions to data. Last year a senior colleague wanted to adopt MongoDB for tracking events and I felt Postgres with JSONB would do, because we already ran it and the team knew it. Instead of arguing, I wrote a one-page comparison and ran a small benchmark with our real event volume. We ended up with Postgres, and he agreed after seeing the numbers. I also try to listen first, because he had a valid point about schema flexibility.</v>
+
+33
+00:07:46.015 --> 00:07:51.015
+<v Neha Verma>Nice. How do you explain technical things to non-technical people, like operations managers?</v>
+
+34
+00:07:52.215 --> 00:08:13.754
+<v Rahul Mehta>I avoid jargon and tie it to their problem. For instance, instead of saying the consumer lag is high, I said updates are arriving about thirty minutes late, so customers see old status. Then I give a simple timeline for the fix. I also send a short written summary after the call so nothing is lost.</v>
+
+35
+00:08:14.954 --> 00:08:18.031
+<v Neha Verma>Great. Do you have any questions for us?</v>
+
+36
+00:08:19.231 --> 00:08:26.923
+<v Rahul Mehta>Yes, what does the on-call rotation look like, and what's the biggest technical challenge the team is facing right now?</v>
+
+37
+00:08:28.123 --> 00:08:39.662
+<v Neha Verma>We have a weekly rotation shared by six engineers, fairly light. The big challenge is migrating our monolith into services. Priya from HR will join to talk about next steps.</v>
+
+38
+00:08:40.862 --> 00:08:52.785
+<v Priya Nair>Hi Rahul, I'm Priya from HR. Thanks for your time today. We'll share feedback within a week, and I'll email you the next steps. Is your notice period still sixty days?</v>
+
+39
+00:08:53.985 --> 00:08:59.754
+<v Rahul Mehta>Hi Priya. Yes, sixty days, but it's negotiable with my current employer to some extent.</v>
+
+40
+00:09:00.954 --> 00:09:02.954
+<v Priya Nair>Perfect. Thank you both.</v>

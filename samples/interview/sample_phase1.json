@@ -1,0 +1,167 @@
+{
+  "jd_id": "jd-d7e0fe00",
+  "jd_text": "Senior Backend Engineer - Payments Platform\n\nAbout the role\nWe are hiring a Backend Engineer to build and scale our payments platform.\n\nRequirements\n- 4+ years of experience with Python and FastAPI building production APIs\n- Strong knowledge of PostgreSQL, including query tuning and schema design\n- Hands-on experience with Docker and Kubernetes for deploying services\n- Experience with Apache Kafka for event-driven systems\n\nNice to have\n- Familiarity with Redis caching\n- Exposure to AWS (ECS, S3, SQS)\n",
+  "role_title": "Senior Backend Engineer - Payments Platform",
+  "overall_experience": "4+ years",
+  "skills": [
+    {
+      "raw_text": "Python",
+      "standard_id": "python",
+      "standard_name": "Python",
+      "category": "Language",
+      "importance": "must_have",
+      "required_experience": "4+ years",
+      "evidence_quote": "4+ years of experience with Python and FastAPI building production APIs",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "FastAPI",
+      "standard_id": "fastapi",
+      "standard_name": "FastAPI",
+      "category": "Framework",
+      "importance": "must_have",
+      "required_experience": "4+ years",
+      "evidence_quote": "4+ years of experience with Python and FastAPI building production APIs",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "PostgreSQL",
+      "standard_id": "postgresql",
+      "standard_name": "PostgreSQL",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Strong knowledge",
+      "evidence_quote": "Strong knowledge of PostgreSQL, including query tuning and schema design",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "Docker",
+      "standard_id": "docker",
+      "standard_name": "Docker",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Hands-on",
+      "evidence_quote": "Hands-on experience with Docker and Kubernetes for deploying services",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "Kubernetes",
+      "standard_id": "kubernetes",
+      "standard_name": "Kubernetes",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Hands-on",
+      "evidence_quote": "Hands-on experience with Docker and Kubernetes for deploying services",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "Apache Kafka",
+      "standard_id": "kafka",
+      "standard_name": "Apache Kafka",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Experience",
+      "evidence_quote": "Experience with Apache Kafka for event-driven systems",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "Redis",
+      "standard_id": "redis",
+      "standard_name": "Redis",
+      "category": "Tool",
+      "importance": "nice_to_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Familiarity with Redis caching",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "AWS",
+      "standard_id": "aws",
+      "standard_name": "AWS",
+      "category": "Tool",
+      "importance": "nice_to_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Exposure to AWS (ECS, S3, SQS)",
+      "match_type": "exact",
+      "needs_review": false
+    }
+  ],
+  "unmapped": [],
+  "questions": [
+    {
+      "skill_id": "python",
+      "question": "What are the main differences between a list and a tuple in Python?",
+      "keywords": [
+        "mutable",
+        "immutable",
+        "syntax",
+        "performance",
+        "use cases"
+      ],
+      "model_answer": "Lists are mutable, tuples are immutable, affecting how they can be changed and their performance.",
+      "hr_result": null
+    },
+    {
+      "skill_id": "databricks",
+      "question": "How does Databricks simplify collaborative data engineering?",
+      "keywords": [
+        "notebook",
+        "shared workspace",
+        "cluster management",
+        "version control",
+        "scalability"
+      ],
+      "model_answer": "Databricks provides shared notebooks, managed clusters, and version control to enable teamwork on data pipelines.",
+      "hr_result": null
+    },
+    {
+      "skill_id": "spark",
+      "question": "What is a Spark DataFrame and why is it preferred over RDDs?",
+      "keywords": [
+        "structured",
+        "optimizations",
+        "SQL API",
+        "performance",
+        "schema"
+      ],
+      "model_answer": "A DataFrame is a structured, schema‑aware collection that allows Spark to apply optimizations, making it faster than RDDs.",
+      "hr_result": null
+    },
+    {
+      "skill_id": "Machine Learning models",
+      "question": "When would you choose a decision tree over a linear regression model?",
+      "keywords": [
+        "non‑linear",
+        "interpretability",
+        "categorical",
+        "splits",
+        "prediction type"
+      ],
+      "model_answer": "Decision trees handle non‑linear relationships and categorical data, offering interpretability, unlike linear regression which models linear trends.",
+      "hr_result": null
+    },
+    {
+      "skill_id": "Machine Learning lifecycle",
+      "question": "What are the key steps in deploying a machine‑learning model to production?",
+      "keywords": [
+        "training",
+        "validation",
+        "packaging",
+        "monitoring",
+        "scaling"
+      ],
+      "model_answer": "You train and validate the model, package it, deploy it, then monitor performance and scale as needed.",
+      "hr_result": null
+    }
+  ],
+  "warnings": [],
+  "model_name": "sample",
+  "disclaimer": "AI-generated, needs human review"
+}

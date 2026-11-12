@@ -1,0 +1,304 @@
+{
+  "jd_id": "jd-d7e0fe00",
+  "jd_text": "[JD text omitted from this sample. The skills and questions below are what Phase 1 extracted from it.]",
+  "role_title": "AI/ML Developer",
+  "overall_experience": "2-3 years",
+  "skills": [
+    {
+      "raw_text": "Python",
+      "standard_id": "python",
+      "standard_name": "Python",
+      "category": "Language",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Strong programming skills in Python",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "Databricks",
+      "standard_id": "databricks",
+      "standard_name": "Databricks",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Hands-on experience with Databricks and PySpark",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "PySpark",
+      "standard_id": "spark",
+      "standard_name": "Apache Spark",
+      "category": "Framework",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Hands-on experience with Databricks and PySpark",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "Machine Learning models",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Domain",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Experience building and deploying ML models",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "Machine Learning lifecycle",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Domain",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Good understanding of Machine Learning lifecycle",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "GenAI/LLM use cases",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Domain",
+      "importance": "nice_to_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Exposure to GenAI/LLM use cases preferred",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "Delta Lake",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Utilize Delta Lake, Databricks Notebooks, and Databricks Workflows",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "Databricks Notebooks",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Utilize Delta Lake, Databricks Notebooks, and Databricks Workflows",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "Databricks Workflows",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Utilize Delta Lake, Databricks Notebooks, and Databricks Workflows",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "RAG",
+      "standard_id": "rag",
+      "standard_name": "Retrieval-Augmented Generation",
+      "category": "Domain",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Experience with RAG, LangChain, or AI Agents",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "LangChain",
+      "standard_id": "langchain",
+      "standard_name": "LangChain",
+      "category": "Framework",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Experience with RAG, LangChain, or AI Agents",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "AI Agents",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Domain",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Experience with RAG, LangChain, or AI Agents",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "LLMOps",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Domain",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Knowledge of LLMOps and MLOps practices",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "MLOps practices",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Domain",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Knowledge of LLMOps and MLOps practices",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "Delta Live Tables",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Tool",
+      "importance": "nice_to_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Exposure to Delta Live Tables and Unity Catalog",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "Unity Catalog",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Tool",
+      "importance": "nice_to_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Exposure to Delta Live Tables and Unity Catalog",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "Snowflake",
+      "standard_id": "snowflake",
+      "standard_name": "Snowflake",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Experience working with Snowflake or cloud data platforms",
+      "match_type": "exact",
+      "needs_review": false
+    },
+    {
+      "raw_text": "cloud data platforms",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Tool",
+      "importance": "must_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Experience working with Snowflake or cloud data platforms",
+      "match_type": "unmapped",
+      "needs_review": true
+    },
+    {
+      "raw_text": "Databricks Certified Associate/Data Engineer certification",
+      "standard_id": "Unmapped",
+      "standard_name": "Unmapped",
+      "category": "Tool",
+      "importance": "nice_to_have",
+      "required_experience": "Not specified",
+      "evidence_quote": "Databricks Certified Associate/Data Engineer certification is a plus",
+      "match_type": "unmapped",
+      "needs_review": true
+    }
+  ],
+  "unmapped": [
+    "AI Agents",
+    "Databricks Certified Associate/Data Engineer certification",
+    "Databricks Notebooks",
+    "Databricks Workflows",
+    "Delta Lake",
+    "Delta Live Tables",
+    "GenAI/LLM use cases",
+    "LLMOps",
+    "MLOps practices",
+    "Machine Learning lifecycle",
+    "Machine Learning models",
+    "Unity Catalog",
+    "cloud data platforms"
+  ],
+  "questions": [
+    {
+      "skill_id": "python",
+      "question": "What are the main differences between a list and a tuple in Python?",
+      "keywords": [
+        "mutable",
+        "immutable",
+        "syntax",
+        "performance",
+        "use cases"
+      ],
+      "model_answer": "Lists are mutable, tuples are immutable, affecting how they can be changed and their performance.",
+      "hr_result": null
+    },
+    {
+      "skill_id": "databricks",
+      "question": "How does Databricks simplify collaborative data engineering?",
+      "keywords": [
+        "notebook",
+        "shared workspace",
+        "cluster management",
+        "version control",
+        "scalability"
+      ],
+      "model_answer": "Databricks provides shared notebooks, managed clusters, and version control to enable teamwork on data pipelines.",
+      "hr_result": null
+    },
+    {
+      "skill_id": "spark",
+      "question": "What is a Spark DataFrame and why is it preferred over RDDs?",
+      "keywords": [
+        "structured",
+        "optimizations",
+        "SQL API",
+        "performance",
+        "schema"
+      ],
+      "model_answer": "A DataFrame is a structured, schema‑aware collection that allows Spark to apply optimizations, making it faster than RDDs.",
+      "hr_result": null
+    },
+    {
+      "skill_id": "Machine Learning models",
+      "question": "When would you choose a decision tree over a linear regression model?",
+      "keywords": [
+        "non‑linear",
+        "interpretability",
+        "categorical",
+        "splits",
+        "prediction type"
+      ],
+      "model_answer": "Decision trees handle non‑linear relationships and categorical data, offering interpretability, unlike linear regression which models linear trends.",
+      "hr_result": null
+    },
+    {
+      "skill_id": "Machine Learning lifecycle",
+      "question": "What are the key steps in deploying a machine‑learning model to production?",
+      "keywords": [
+        "training",
+        "validation",
+        "packaging",
+        "monitoring",
+        "scaling"
+      ],
+      "model_answer": "You train and validate the model, package it, deploy it, then monitor performance and scale as needed.",
+      "hr_result": null
+    }
+  ],
+  "warnings": [
+    "Unmapped skills (add to taxonomy later): AI Agents, Databricks Certified Associate/Data Engineer certification, Databricks Notebooks, Databricks Workflows, Delta Lake, Delta Live Tables, GenAI/LLM use cases, LLMOps, MLOps practices, Machine Learning lifecycle, Machine Learning models, Unity Catalog, cloud data platforms"
+  ],
+  "model_name": "openai/gpt-oss-120b",
+  "disclaimer": "AI-generated, needs human review"
+}

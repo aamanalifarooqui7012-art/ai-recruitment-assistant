@@ -1,0 +1,25 @@
+Rahul Sharma
+Email: rahul.sharma@example.com | Phone: +91 98765 43210
+
+Summary
+Backend developer with 5 years of experience building APIs and data services.
+
+Technical Skills
+Languages: Python, SQL, JavaScript
+Frameworks: FastAPI, Flask
+Databases: PostgreSQL, MongoDB
+Tools: Docker, Git, Redis
+
+Work Experience
+Backend Developer, Acme Fintech (Jan 2021 - Present)
+- Built payment reconciliation APIs in Python and FastAPI serving 200 requests per second
+- Tuned slow PostgreSQL queries using EXPLAIN ANALYZE and added composite indexes, cutting report time from 40 seconds to 6 seconds
+- Wrote CI pipelines in GitHub Actions and deployed services to virtual machines
+
+Projects
+Invoice Matching Service
+- Designed a PostgreSQL schema for invoices and ledger entries with partitioning by month
+- Implemented a FastAPI service that matches invoices against bank statements using fuzzy matching
+
+Personal Blog Platform
+- Built a Flask app with Redis caching for page fragments

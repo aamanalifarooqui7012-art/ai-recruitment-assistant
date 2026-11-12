@@ -1,0 +1,103 @@
+{
+  "resume": "Sample_Candidate_Partial.pdf",
+  "hands_on": [
+    {
+      "skill_id": "python",
+      "name": "Python",
+      "category": "Language",
+      "evidence": [
+        {
+          "quote": "Built a project with Python at Example Corp",
+          "block_id": 1,
+          "source": "both",
+          "section": "experience",
+          "entry": 0,
+          "dates": {
+            "start": "2024-01",
+            "end": "present"
+          }
+        }
+      ],
+      "sources": [
+        "both"
+      ],
+      "also_in_theory": false
+    },
+    {
+      "skill_id": "databricks",
+      "name": "Databricks",
+      "category": "Tool",
+      "evidence": [
+        {
+          "quote": "Built a project with Databricks at Example Corp",
+          "block_id": 1,
+          "source": "both",
+          "section": "experience",
+          "entry": 0,
+          "dates": {
+            "start": "2024-01",
+            "end": "present"
+          }
+        }
+      ],
+      "sources": [
+        "both"
+      ],
+      "also_in_theory": false
+    }
+  ],
+  "theoretical": [
+    {
+      "skill_id": "spark",
+      "name": "Apache Spark",
+      "category": "Framework",
+      "evidence": [
+        {
+          "quote": "Apache Spark (familiar)",
+          "block_id": 1,
+          "source": "both",
+          "section": "skills",
+          "entry": 0,
+          "dates": {
+            "start": "2024-01",
+            "end": "present"
+          }
+        }
+      ],
+      "sources": [
+        "both"
+      ],
+      "also_in_theory": false
+    },
+    {
+      "skill_id": "rag",
+      "name": "Retrieval-Augmented Generation",
+      "category": "Domain",
+      "evidence": [
+        {
+          "quote": "Retrieval-Augmented Generation (familiar)",
+          "block_id": 1,
+          "source": "both",
+          "section": "skills",
+          "entry": 0,
+          "dates": {
+            "start": "2024-01",
+            "end": "present"
+          }
+        }
+      ],
+      "sources": [
+        "both"
+      ],
+      "also_in_theory": false
+    }
+  ],
+  "unmapped": [],
+  "review_candidates": [],
+  "rejected_llm_items": [],
+  "code_added": [],
+  "stats": {
+    "llm_used": false,
+    "note": "synthetic sample, not a real resume"
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "source_file": "rahul.docx",
+  "file_type": "docx",
+  "text_source": "embedded",
+  "notes": [
+    "name_guessed"
+  ],
+  "links_found": 0,
+  "label_stats": {
+    "known_headings": 5,
+    "unknown_headings": 0,
+    "other_ratio": 0.0,
+    "low_conf_ratio": 0.0
+  },
+  "status": "ok",
+  "review_reasons": [],
+  "sections": [
+    {
+      "name": "contact",
+      "entries": [
+        {
+          "dates": null,
+          "blocks": [
+            {
+              "id": 0,
+              "text": "Rahul Sharma",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "inferred",
+              "confidence": 0.95,
+              "flags": [
+                "name",
+                "name_guess"
+              ],
+              "links": []
+            },
+            {
+              "id": 1,
+              "text": "Email: [EMAIL_1] | Phone: [PHONE_1]",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "inferred",
+              "confidence": 0.95,
+              "flags": [],
+              "links": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "summary",
+      "entries": [
+        {
+          "dates": null,
+          "blocks": [
+            {
+              "id": 2,
+              "text": "Summary",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": true,
+              "label_source": "heading",
+              "confidence": 1.0,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 3,
+              "text": "Backend developer with 5 years of experience building APIs and data services.",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "experience",
+      "entries": [
+        {
+          "dates": null,
+          "blocks": [
+            {
+              "id": 9,
+              "text": "Work Experience",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": true,
+              "label_source": "heading",
+              "confidence": 1.0,
+              "flags": [],
+              "links": []
+            }
+          ]
+        },
+        {
+          "dates": {
+            "start": "2021-01",
+            "end": "present"
+          },
+          "blocks": [
+            {
+              "id": 10,
+              "text": "Backend Developer, Acme Fintech (Jan 2021 - Present)",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 11,
+              "text": "- Built payment reconciliation APIs in Python and FastAPI serving 200 requests per second",
+              "page": 1,
+              "is_bullet": true,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 12,
+              "text": "- Tuned slow PostgreSQL queries using EXPLAIN ANALYZE and added composite indexes, cutting report time from 40 seconds to 6 seconds",
+              "page": 1,
+              "is_bullet": true,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 13,
+              "text": "- Wrote CI pipelines in GitHub Actions and deployed services to virtual machines",
+              "page": 1,
+              "is_bullet": true,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "skills",
+      "entries": [
+        {
+          "dates": null,
+          "blocks": [
+            {
+              "id": 4,
+              "text": "Technical Skills",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": true,
+              "label_source": "heading",
+              "confidence": 1.0,
+              "flags": [],
+              "links": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "entries": [
+        {
+          "dates": null,
+          "blocks": [
+            {
+              "id": 14,
+              "text": "Projects",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": true,
+              "label_source": "heading",
+              "confidence": 1.0,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 15,
+              "text": "Invoice Matching Service",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 16,
+              "text": "- Designed a PostgreSQL schema for invoices and ledger entries with partitioning by month",
+              "page": 1,
+              "is_bullet": true,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 17,
+              "text": "- Implemented a FastAPI service that matches invoices against bank statements using fuzzy matching",
+              "page": 1,
+              "is_bullet": true,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 18,
+              "text": "Personal Blog Platform",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 19,
+              "text": "- Built a Flask app with Redis caching for page fragments",
+              "page": 1,
+              "is_bullet": true,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "languages",
+      "entries": [
+        {
+          "dates": null,
+          "blocks": [
+            {
+              "id": 5,
+              "text": "Languages: Python, SQL, JavaScript",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": true,
+              "label_source": "heading_inline",
+              "confidence": 0.95,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 6,
+              "text": "Frameworks: FastAPI, Flask",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 7,
+              "text": "Databases: PostgreSQL, MongoDB",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            },
+            {
+              "id": 8,
+              "text": "Tools: Docker, Git, Redis",
+              "page": 1,
+              "is_bullet": false,
+              "is_heading": false,
+              "label_source": "section_context",
+              "confidence": 0.9,
+              "flags": [],
+              "links": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

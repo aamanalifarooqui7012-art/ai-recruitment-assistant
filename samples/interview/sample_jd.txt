@@ -1,0 +1,14 @@
+Senior Backend Engineer - Payments Platform
+
+About the role
+We are hiring a Backend Engineer to build and scale our payments platform.
+
+Requirements
+- 4+ years of experience with Python and FastAPI building production APIs
+- Strong knowledge of PostgreSQL, including query tuning and schema design
+- Hands-on experience with Docker and Kubernetes for deploying services
+- Experience with Apache Kafka for event-driven systems
+
+Nice to have
+- Familiarity with Redis caching
+- Exposure to AWS (ECS, S3, SQS)
